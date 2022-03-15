@@ -1,0 +1,18 @@
+@model IList<AppOwnsDataMultiTenant.Services.PowerBiServiceApi.Profile>
+
+<h2>Service Principal Profiles in Power BI</h2>
+
+<table class="table table-bordered table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th>Display Name</th>
+      <th>ID</th>
+    </tr>
+  </thead>
+  @foreach (var profile in @Model) {
+    <tr>
+      <td>@profile.displayName</td>
+      <td>@profile.id</td>
+    </tr>
+  }
+</table>

@@ -1,0 +1,38 @@
+@model AppOwnsDataMultiTenant.Controllers.HomeController.CreateServicePrincipalProfileModel
+
+<h2 id="page-title">Create New Service Principal Profile</h2>
+
+<form id="new-profile" method="post" class="form-horizontal">
+  <fieldset>
+    <div class="form-group row">
+      <label for="ProfileName" class="col-sm-2 col-form-label">Profile Name</label>
+      <div class="col-sm-10">
+        <input class="form-control" id="ProfileName" name="ProfileName" placeholder="Enter service principal name" value="@Model.ProfileName">
+      </div>
+    </div>
+    <div class="form-group row button-row">
+      <button id="create-profile-button" type="submit" class="btn btn-primary">
+        <i class="fa fa-android"></i>
+        Add New Profile to Pool
+      </button>
+    </div>
+  </fieldset>
+</form>
+
+<div class="loading" style="display:none;">
+  <div class="loading-image">
+    <img src="~/images/loading.gif" />
+  </div>
+</div>
+
+@section Scripts {
+  <script type="text/javascript">
+    $(function () {
+      $("#new-profile").submit(function () {
+        $("#new-profile").hide();
+        $("#page-title").text("Creating New Service Principal Profile...");
+        $(".loading").show(100);
+      });
+    });
+  </script>
+}

@@ -1,0 +1,35 @@
+@model IList<AppOwnsDataMultiTenant.Models.ServicePrincipalProfile>
+
+<h2>Service Principal Profiles</h2>
+
+<div class="toolbar">
+  <a id="create-profile-button" class="btn btn-primary" asp-action="CreateProfile">
+    <i class="fa fa-user-plus"></i>
+    Add new profile
+  </a>
+</div>
+
+<table class="table table-bordered table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th>Name</th>
+      <th>ID</th>
+      <th>Created</th>
+      <th>Exlusive</th>
+      <th>Tenants</th>
+      <th style="text-align:center;">View</th>
+      <th style="text-align:center;">Delete</th>
+    </tr>
+  </thead>
+  @foreach (var profile in @Model) {
+    <tr>
+      <td>@profile.Name</td>
+      <td>@profile.ProfileId</td>
+      <td>@profile.Created</td>
+      <td>@profile.Exclusive</td>
+      <td>@profile.Tenants.Count()</td>
+      <td style="text-align:center"><a href="Profile/?ProfileName=@profile.Name" class="nav nav-link"><i class="fa fa-binoculars"></i></a></td>
+      <td style="text-align:center"><a href="DeleteProfile/?ProfileId=@profile.ProfileId" class="nav nav-link"><i class="fa fa-remove"></i></a></td>
+    </tr>
+  }
+</table>
