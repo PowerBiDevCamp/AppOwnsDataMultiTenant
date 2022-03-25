@@ -1,0 +1,1 @@
+pandoc --extract-media ./Images/ReadMe AppOwnsDataMultiTenant.docx -t gfm -o Readme.md
