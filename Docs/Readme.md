@@ -566,7 +566,7 @@ The following screenshot shows the Access pane for a workspace whose
 membership includes a user, a service principal and a service principal
 profile.
 
-<img src="./Images/ReadMe/media/image13.emf" style="width:1.83848in;height:2.05464in" />
+<img src="./Images/ReadMe/media/image13.png" style="width:2.42248in;height:2.69811in" />
 
 ### Executing API Calls Under the Identity of a Service Principal Profile
 
