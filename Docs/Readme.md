@@ -530,7 +530,7 @@ the URL.
 If you are programming with the Power BI .NET SDK, you can call
 **Profile.DeleteProfile** using the following code.
 
-<img src="./Images/ReadMe/media/image8.emf" style="width:3.95in;height:0.34in" />
+<img src="./Images/ReadMe/media/image8.png" style="width:3.98056in;height:0.36667in" />
 
 If you need to query the set of service principal profiles associated
 with the current service principal, you can execute an HTTP GET
