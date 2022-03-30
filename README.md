@@ -1245,7 +1245,7 @@ Click on the **View** button for a specific tenant on the 
 The **Tenant Details** page displays Power BI workspace details
 including its members, datasets and reports.
 
-<img src="./Docs/Images/media/image92.png"  width=600  />
+<img src="./Docs/Images/media/image92.png"  width=800  />
 
 If you use a developer tool such as Fiddler, you can inspect the API
 call to retrieve workspace members as well as the API calls to retrieve
