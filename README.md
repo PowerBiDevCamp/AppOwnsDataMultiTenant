@@ -340,7 +340,7 @@ owner of a dataset and the owner of datasource credentials. This leads
 to the best practice of creating a new service principal profile for
 each new customer tenant as shown in the following diagram.
 
-<img src="./Docs/Images/media/image4.png" style="width:3.61635in;height:1.70069in" alt="Diagram Description automatically generated" />
+<img src="./Docs/Images/media/image4.png" width=600 />
 
 When you develop a custom application using service principal profiles,
 you only need a single Azure AD application which provides your
