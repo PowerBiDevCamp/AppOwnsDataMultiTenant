@@ -457,18 +457,18 @@ If you are programming with the Power BI .NET SDK, you can call
 **ServicePrinicpalProfile** object which makes it possible to discover
 the **id** property value of the new profile.
 
-<img src="./Docs/Images/media/image6.png" width=400 />
+<img src="./Docs/Images/media/image6.png" width=600 />
 
 When you need to delete a service principal profile, you can execute an
 HTTP DELETE operation in which the profile id is parsed into the end of
 the URL.
 
-<img src="./Docs/Images/media/image7.png" width=400 />
+<img src="./Docs/Images/media/image7.png" width=600 />
 
 If you are programming with the Power BI .NET SDK, you can call
 **Profile.DeleteProfile** using the following code.
 
-<img src="./Docs/Images/media/image8.png" width=400 />
+<img src="./Docs/Images/media/image8.png" width=600 />
 
 If you need to query the set of service principal profiles associated
 with the current service principal, you can execute an HTTP GET
@@ -476,12 +476,12 @@ operation against the **Profiles** endpoint. This API calls returns a
 JSON payload with the **id** and **displayName** of each service
 principal profile.
 
-<img src="./Docs/Images/media/image9.png" width=400 />
+<img src="./Docs/Images/media/image9.png" width=600 />
 
 If you are programming with the Power BI .NET SDK, you can call
 **Profile.GetProfiles** using the following code.
 
-<img src="./Docs/Images/media/image10.png" style="width:5.38in;height:0.23in" />
+<img src="./Docs/Images/media/image10.png" width=600 />
 
 Let's say you've just created a new service principal profile and you'd
 like to add it as a member of a workspace to give it access. You can
