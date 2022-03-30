@@ -1209,7 +1209,7 @@ Let's examine what has been stored in the **Profiles** table in
 **AppOwnsDataMultiTenantDB** database. Note that **ProfileName** column
 serves as the primary key of the **Profiles** table
 
-<img src="./Docs/Images/media/image87.png"  width=550  />
+<img src="./Docs/Images/media/image87.png"  width=450  />
 
 The application also added new records to the **Tenants** table. Note
 that the **ProfileName** column in the **Tenants** table serves as a
@@ -1223,7 +1223,7 @@ page, the application calls the **Get Profiles** operation of the Power
 BI REST API to retrieve all the profiles that have been created by the
 application's service principal.
 
-<img src="./Docs/Images/media/image89.png"  width=600  />
+<img src="./Docs/Images/media/image89.png"  width=700  />
 
 If you use a developer tool such as Fiddler, you can inspect the call to
 **Get Profiles** to see the JSON response.
