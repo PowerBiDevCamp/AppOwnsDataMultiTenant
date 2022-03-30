@@ -927,7 +927,7 @@ named **AppOwnsDataMultiTenant.sln**. You should note that this
 development project has been built as a .NET 6 MVC Web Application as
 shown in the following screenshot.
 
-<img src="./Docs/Images/media/image58.png" width=400 />
+<img src="./Docs/Images/media/image58.png" width=320 />
 
 Let's quickly review the NuGet packages that have been installed in
 the **AppOwnsDataMultiTenant** project. There are several NuGet packages
