@@ -897,7 +897,7 @@ Here are links to download this software if you need them.
 The source code for **AppOwnsDataMultiTenant** is maintained in a GitHub
 repository at the following URL.
 
-[**https://github.com/PowerBiDevCamp/AppOwnsDataMultiTenant**](https://github.com/PowerBiDevCamp/TenantManagement)
+> [**https://github.com/PowerBiDevCamp/AppOwnsDataMultiTenant**](https://github.com/PowerBiDevCamp/TenantManagement)
 
 You can download the **AppOwnsDataMultiTenant** project source files in
 a single ZIP archive using **[this
@@ -906,7 +906,7 @@ If you are familiar with the **git** utility, you can clone the project
 source files to your local developer workstation using the
 following **git** command.
 
-```ps
+```
 git clone https://github.com/PowerBiDevCamp/AppOwnsDataMultiTenant.git
 ```
 
