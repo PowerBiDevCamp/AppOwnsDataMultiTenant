@@ -1150,12 +1150,12 @@ the following screenshot.
 Now it's time to create your first customer tenant. Start by navigating
 to the **Tenants** page.
 
-<img src="./Docs/Images/media/image79.png"  width=500 />
+<img src="./Docs/Images/media/image79.png"  width=400 />
 
 Click the **Onboard New Tenant** button to display the **Onboard New
 Tenant** page.
 
-<img src="./Docs/Images/media/image80.png"  width=600  />
+<img src="./Docs/Images/media/image80.png"  width=400  />
 
 On the **Onboard New Tenant** page, enter a **Tenant Name** of
 **Wingtip**. Leave all the other input elements with their default
