@@ -1048,7 +1048,7 @@ When you generate the database, each of these **DBSet** properties will
 be created as database tables. The **Profiles** table is generated using
 the table schema defined by the **AppProfile** class.
 
-<img src="./Docs/Images/media/image67.png"  width=460  />
+<img src="./Docs/Images/media/image67.png"  width=420  />
 
 As you saw earlier, Power BI tracks an **id** and **displayName**
 property for each profile. The **AppProfile** class defines
@@ -1070,23 +1070,25 @@ project database named **AppOwnsDataMultiTenantDB**.
 Open the Package Manager console using **Tools \> NuGet Package Manager
 \> Package Manager Console**.
 
-<img src="./Docs/Images/media/image69.png" style="width:6.98889in;height:2.10417in" />
+<img src="./Docs/Images/media/image69.png"  width=700  />
 
 You should see the **Package Manager Console** command prompt where you
 can execute PowerShell commands.
 
-<img src="./Docs/Images/media/image70.png" style="width:4.87302in;height:1.87956in" />
+<img src="./Docs/Images/media/image70.png"  width=700  />
 
 Type and execute the following **Add-Migration** command to create a new
 Entity Framework migration in the project.
 
+```
 Add-Migration InitialCreate
+```
 
 The **Add-Migration** command should run without errors. If this command
 fails you might have to modify the database connection string
 in **appsettings.json**.
 
-<img src="./Docs/Images/media/image71.png" style="width:3.84306in;height:1.01042in" />
+<img src="./Docs/Images/media/image71.png"  width=700  />
 
 After running the **Add-Migration** command, you will see a new folder
 has been added to the project named **Migrations** with several C#
@@ -1094,25 +1096,27 @@ source files. There is no need to change anything in these source files
 but you can inspect what's inside them if you are curious how the Entity
 Framework does its work.
 
-<img src="./Docs/Images/media/image72.png" style="width:2.25in;height:1.86458in" />
+<img src="./Docs/Images/media/image72.png"  width=700 />
 
 Return to the **Package Manager Console** and run the
 following **Update-Database** command to generate the database
 named **AppOwnsDataMultiTenantDB**.
 
+```
 Update-Database
+```
 
 The **Update-Database** command should run and generate the database
 named **AppOwnsDataMultiTenantDB**.
 
-<img src="./Docs/Images/media/image73.png" style="width:4.82456in;height:1.40459in" alt="Graphical user interface, text, application, email Description automatically generated" />
+<img src="./Docs/Images/media/image73.png" width=700  />
 
 In Visual Studio, you can use the **SQL Server Object Explorer** to see
 the database that has just been created. Open the **SQL Server Object
 Explorer** by invoking the **View \>** **SQL Server Object
 Explorer** menu command.
 
-<img src="./Docs/Images/media/image74.png" style="width:3.62431in;height:1.1875in" />
+<img src="./Docs/Images/media/image74.png"  width=700 />
 
 Expand the **Databases** node for the server you are using and verify
 you an see the new database named **AppOwnsDataMultiTenantDB**.
