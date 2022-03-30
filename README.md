@@ -637,24 +637,23 @@ tenant by completing the following tasks.
 
 ### Create an Azure AD security group named Power BI Apps
 
-Begin by navigating to the [Groups management
-page](https://portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/AllGroups) in
-the Azure portal. Once you get to the **Groups** page in the Azure
-portal, click the **New group** link.
+Begin by navigating to the **[Groups management
+page](https://portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/AllGroups)** in
+the Azure portal. Once you get to the **Groups** page in the Azure portal, click the **New group** link.
 
-<img src="./Docs/Images/media/image23.png" style="width:4in;height:1.50915in" />
+<img src="./Docs/Images/media/image23.png" width=700 />
 
 In the **New Group** dialog, Select a **Group type** of **Security** and
 enter a **Group name** of **Power BI Apps**. Click the **Create** button
 to create the new Azure AD security group.
 
-<img src="./Docs/Images/media/image24.png" style="width:3.34921in;height:2.06797in" />
+<img src="./Docs/Images/media/image24.png" width=700 />
 
 It might take a minute or two before the group appears. Refresh the
 **All Groups** page a few times until you can verify that you can see
 the new security group named **Power BI Apps** in the list of groups.
 
-<img src="./Docs/Images/media/image25.png" style="width:4.84306in;height:1.77083in" />
+<img src="./Docs/Images/media/image25.png" width=700 />
 
 ### Configure Power BI tenant-level settings for service principal profile access
 
