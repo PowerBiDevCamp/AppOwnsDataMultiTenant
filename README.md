@@ -490,13 +490,13 @@ following JSON with an **identifier** property with the service
 principal object ID and an inner **profile** object with an **id**
 property that contains the profile Id.
 
-<img src="./Docs/Images/media/image11.png" width=720 />
+<img src="./Docs/Images/media/image11.png" width=600 />
 
 If you are programming with the Power BI .NET SDK, you can use the
 following code to add a service principal profile as a workspace member
 in the role of Admin.
 
-<img src="./Docs/Images/media/image12.png" width=720 />
+<img src="./Docs/Images/media/image12.png" width=780 />
 
 If you inspect the **Access** pane for a Power BI workspace in the Power
 BI Service, you can determine which accounts have been added as members.
@@ -504,7 +504,7 @@ The following screenshot shows the Access pane for a workspace whose
 membership includes a user and a service principal profile with a
 display name of Contoso.
 
-<img src="./Docs/Images/media/image13.png" width=450 />
+<img src="./Docs/Images/media/image13.png" width=400 />
 
 ### Executing API Calls under the Identity of a Service Principal Profile
 
