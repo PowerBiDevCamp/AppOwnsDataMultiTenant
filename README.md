@@ -1228,7 +1228,7 @@ application's service principal.
 If you use a developer tool such as Fiddler, you can inspect the call to
 **Get Profiles** to see the JSON response.
 
-<img src="./Docs/Images/media/image90.png"  width=600  />
+<img src="./Docs/Images/media/image90.png"  width=800  />
 
 ### Access Customer Tenants
 
