@@ -810,7 +810,7 @@ the clipboard.
 Paste the **Client Secret** into the same text document with
 the **Client ID** and **Tenant ID**.
 
-<img src="./Docs/Images/media/image48.png"  width=350  />
+<img src="./Docs/Images/media/image48.png"  width=300  />
 
 At this point, you have the Tenant Id, Client Id and Client Secret. This
 is all you need to authenticate with Azure AD to acquire an access token
@@ -824,7 +824,7 @@ Click the **Managed application in local directory** link as shown in
 the following screenshot to navigate to the application's **Properties**
 page.
 
-<img src="./Docs/Images/media/image49.png"  width=720  />
+<img src="./Docs/Images/media/image49.png"  width=800  />
 
 On the **Properties** page, locate the **Object ID** value and copy it
 to the clipboard. This value represents the service principal object Id.
@@ -834,7 +834,7 @@ to the clipboard. This value represents the service principal object Id.
 Now paste the service principal into the text document with the other
 values as shown in the following screenshot.
 
-<img src="./Docs/Images/media/image51.png"  width=600 />
+<img src="./Docs/Images/media/image51.png"  width=300 />
 
 Save the text file so you don’t accidently close it and lose the
 configuration data inside. You will copy and paste these Id values into
