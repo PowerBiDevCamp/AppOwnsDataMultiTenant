@@ -27,64 +27,25 @@ Published March 31, 2022
 * [Introduction to Service Principal Profiles](#introduction-to-service-principal-profiles)
   * [Service Principal Profiles as First-class Power BI Security Principals](#service-principal-profiles-as-first-class-power-bi-security-principals)
   * [Executing Power BI REST API Calls as a Service Principal Profile](#executing-power-bi-rest-api-calls-as-a-service-principal-profile)
-
-[Using the Profiles API to create and manage service principal profiles
-[7](#using-the-profiles-api-to-create-and-manage-service-principal-profiles)](#using-the-profiles-api-to-create-and-manage-service-principal-profiles)
-
-[Executing API Calls under the Identity of a Service Principal Profile
-[9](#executing-api-calls-under-the-identity-of-a-service-principal-profile)](#executing-api-calls-under-the-identity-of-a-service-principal-profile)
-
-[Getting Started with the **AppOwnsDataMultiTenant** application
-[10](#getting-started-with-the-appownsdatamultitenant-application)](#getting-started-with-the-appownsdatamultitenant-application)
-
-[Setting up your development environment
-[11](#setting-up-your-development-environment)](#setting-up-your-development-environment)
-
-[Create an Azure AD security group named Power BI Apps
-[12](#create-an-azure-ad-security-group-named-power-bi-apps)](#create-an-azure-ad-security-group-named-power-bi-apps)
-
-[Configure Power BI tenant-level settings for service principal profile
-access
-[12](#configure-power-bi-tenant-level-settings-for-service-principal-profile-access)](#configure-power-bi-tenant-level-settings-for-service-principal-profile-access)
-
-[Create the Azure AD Application for
-the AppOwnsDataMultiTenant Application
-[15](#create-the-azure-ad-application-for-the-appownsdatamultitenant-application)](#create-the-azure-ad-application-for-the-appownsdatamultitenant-application)
-
-[Add the Azure AD Application to the Power BI Apps Group
-[19](#add-the-azure-ad-application-to-the-power-bi-apps-group)](#add-the-azure-ad-application-to-the-power-bi-apps-group)
-
-[Set Up the AppOwnsDataMultiTenant Application in Visual Studio 2022
-[20](#set-up-the-appownsdatamultitenant-application-in-visual-studio-2022)](#set-up-the-appownsdatamultitenant-application-in-visual-studio-2022)
-
-[Download the Source Code
-[20](#download-the-source-code)](#download-the-source-code)
-
-[Open the Project in Visual Studio 2022
-[20](#open-the-project-in-visual-studio-2022)](#open-the-project-in-visual-studio-2022)
-
-[Update application settings in the appsettings.json file
-[21](#update-application-settings-in-the-appsettings.json-file)](#update-application-settings-in-the-appsettings.json-file)
-
-[Create the AppOwnsDataMultiTenantDB database
-[22](#create-the-appownsdatamultitenantdb-database)](#create-the-appownsdatamultitenantdb-database)
-
-[Test the AppOwnsDataMultiTenant Application
-[25](#test-the-appownsdatamultitenant-application)](#test-the-appownsdatamultitenant-application)
-
-[Create Customer Tenants
-[26](#create-customer-tenants)](#create-customer-tenants)
-
-[Access Customer Tenants
-[28](#access-customer-tenants)](#access-customer-tenants)
-
-[Embed Reports [29](#embed-reports)](#embed-reports)
-
-[Inspect the Power BI Workspaces
-[30](#inspect-the-power-bi-workspaces)](#inspect-the-power-bi-workspaces)
-
-[Create Multiple Workspaces with a Single Service Principal Profile
-[32](#create-multiple-workspaces-with-a-single-service-principal-profile)](#create-multiple-workspaces-with-a-single-service-principal-profile)
+  * [Using the Profiles API to create and manage service principal profiles](#using-the-profiles-api-to-create-and-manage-service-principal-profiles)
+  * [Executing API Calls under the Identity of a Service Principal Profile](#executing-api-calls-under-the-identity-of-a-service-principal-profile)
+* [Getting Started with the **AppOwnsDataMultiTenant** application](#getting-started-with-the-appownsdatamultitenant-application)
+  * [Setting up your development environment](#setting-up-your-development-environment)
+  * [Create an Azure AD security group named Power BI Apps](#create-an-azure-ad-security-group-named-power-bi-apps)
+  * [Configure Power BI tenant-level settings for service principal profile access](#configure-power-bi-tenant-level-settings-for-service-principal-profile-access)
+  * [Create the Azure AD Application for the AppOwnsDataMultiTenant Application](#create-the-azure-ad-application-for-the-appownsdatamultitenant-application)
+  * [Add the Azure AD Application to the Power BI Apps Group](#add-the-azure-ad-application-to-the-power-bi-apps-group)
+* [Set Up the AppOwnsDataMultiTenant Application in Visual Studio 2022](#set-up-the-appownsdatamultitenant-application-in-visual-studio-2022)
+  * [Download the Source Code](#download-the-source-code)
+  * [Open the Project in Visual Studio 2022](#open-the-project-in-visual-studio-2022)
+  * [Update application settings in the appsettings.json file](#update-application-settings-in-the-appsettings.json-file)
+  * [Create the AppOwnsDataMultiTenantDB database](#create-the-appownsdatamultitenantdb-database)
+* [Test the AppOwnsDataMultiTenant Application](#test-the-appownsdatamultitenant-application)
+  * [Create Customer Tenants](#create-customer-tenants)
+  * [Access Customer Tenants](#access-customer-tenants)
+  * [Embed Reports](#embed-reports)
+  * [Inspect the Power BI Workspaces](#inspect-the-power-bi-workspaces)
+  * [Create Multiple Workspaces with a Single Service Principal Profile](#create-multiple-workspaces-with-a-single-service-principal-profile)
 
 ## Developing Multitenant Applications with Power BI Embedding
 
