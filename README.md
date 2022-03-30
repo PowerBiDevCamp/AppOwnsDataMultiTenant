@@ -1390,16 +1390,11 @@ button to display the **Onboard New Tenant** page.
 
 On the **Onboard New Tenant** page…
 
-1.  Enter a **Tenant Name** of **Acme Corp Europe**
-
-2.  Select a **Database Name** of **AcmeCorpSales**
-
-3.  Select the option to **Create Tenant using Service Principal Profile
-    from Pool**
-
-4.  Select **Acme Profile**.
-
-5.  Click **Create New Tenant**.
+* Enter a **Tenant Name** of **Acme Corp Europe**
+* Select a **Database Name** of **AcmeCorpSales**
+* Select the option to **Create Tenant using Service Principal Profile from Pool**
+* Select **Acme Profile**.
+* Click **Create New Tenant**.
 
 <img src="./Docs/Images/media/image110.png"  width=600  />
 
