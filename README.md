@@ -1407,7 +1407,7 @@ Click the **Profile** link to navigate to the **Profiles** page. If you
 inspect the profile named **Acme Profile**, you can see it now has a
 tenant count of **2**.
 
-<img src="./Docs/Images/media/image112.png"  width=600  />
+<img src="./Docs/Images/media/image112.png"  width=800  />
 
 Note that each profile has a value for the **Exclusive** property. This
 property serves two purposes. First, it's used to determine which
