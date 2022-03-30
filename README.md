@@ -623,23 +623,17 @@ configure tenant-level settings for Power BI to enable service
 principals and service principal profiles with the ability to access the
 Power BI Service API. If you do not have a Microsoft 365 environment for
 development and testing, you can create one with free trial licenses by
-following the steps in [Create a Development Environment for Power BI
-Embedding](https://github.com/PowerBiDevCamp/Camp-Sessions/raw/master/Create%20Power%20BI%20Development%20Environment.pdf).
+following the steps in **[Create a Development Environment for Power BI
+Embedding](https://github.com/PowerBiDevCamp/Camp-Sessions/raw/master/Create%20Power%20BI%20Development%20Environment.pdf)**.
 
 To set up the **AppOwnsDataMultiTenant** application for testing, you
 will need to configure a Microsoft 365 environment with an Azure AD
 tenant by completing the following tasks.
 
--   Create an Azure AD security group named **Power BI Apps**
-
--   Configure Power BI tenant-level settings for service principal
-    access
-
--   Configure Power BI tenant-level settings to enable service principal
-    profiles
-
--   Create and configure the Azure AD Application for
-    the **AppOwnsDataMultiTenant** Application
+* Create an Azure AD security group named **Power BI Apps**
+* Configure Power BI tenant-level settings for service principal access
+* Configure Power BI tenant-level settings to enable service principal profiles
+* Create and configure the Azure AD Application for the **AppOwnsDataMultiTenant** Application
 
 ### Create an Azure AD security group named Power BI Apps
 
