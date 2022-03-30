@@ -834,7 +834,7 @@ to the clipboard. This value represents the service principal object Id.
 Now paste the service principal into the text document with the other
 values as shown in the following screenshot.
 
-<img src="./Docs/Images/media/image51.png"  width=350 />
+<img src="./Docs/Images/media/image51.png"  width=450 />
 
 Save the text file so you don’t accidently close it and lose the
 configuration data inside. You will copy and paste these Id values into
@@ -851,28 +851,28 @@ and locate the security group created earlier named **Power BI Apps**.
 Click on the **Power BI Apps** link to drill into the summary page for
 this security group.
 
-<img src="./Docs/Images/media/image52.png" style="width:4.47653in;height:1.74603in" />
+<img src="./Docs/Images/media/image52.png"  width=500  />
 
 On the **Power BI Apps** security group summary page, click the
 **Members** link to navigate to the **Members** page.
 
-<img src="./Docs/Images/media/image53.png" style="width:3.44127in;height:1.31736in" />
+<img src="./Docs/Images/media/image53.png"  width=500   />
 
 On the **Members** page, click the **Add members** link to display the
 **Add members** pane.
 
-<img src="./Docs/Images/media/image54.png" style="width:3.30757in;height:0.69841in" />
+<img src="./Docs/Images/media/image54.png"  width=500   />
 
 In the **Add members** pane, locate and select the **Power BI Embedding
 Tenant Manager** application. Add this application to the **Power BI
 Apps** security group.
 
-<img src="./Docs/Images/media/image55.png" style="width:3.61441in;height:1.2381in" />
+<img src="./Docs/Images/media/image55.png"  width=500   />
 
 Verify that the **Power BI Embedding Tenant Manager** application is now
 a member of the **Power BI Apps** group.
 
-<img src="./Docs/Images/media/image56.png" style="width:3.93449in;height:1.76191in" />
+<img src="./Docs/Images/media/image56.png"  width=500   />
 
 You are now finished in configuring Azure AD for the application setup.
 
@@ -888,14 +888,9 @@ Code if you prefer that IDE.
 
 Here are links to download this software if you need them.
 
--   .NET 6 SDK –
-    \[[**download**](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)\]
-
--   Visual Studio 2022 –
-    \[[**download**](https://visualstudio.microsoft.com/downloads/)\]
-
--   Visual Studio Code –
-    \[[**download**](https://code.visualstudio.com/download)\]
+* .NET 6 SDK – \[[**download**](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)\]
+* Visual Studio 2022 – \[[**download**](https://visualstudio.microsoft.com/downloads/)\]
+* Visual Studio Code – \[[**download**](https://code.visualstudio.com/download)\]
 
 ### Download the Source Code
 
