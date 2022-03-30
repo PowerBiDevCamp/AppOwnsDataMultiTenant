@@ -1172,7 +1172,7 @@ switches contexts and executes the following API calls under the
 identity of the new service principal profile.
 
 * Create a new Power BI workspace
-* Upload a [template PBIX file](https://github.com/PowerBiDevCamp/AppOwnsDataMultiTenant/raw/main/wwwroot/PBIX/DatasetTemplate.pbix) to create 
+* Upload a **[template PBIX file](https://github.com/PowerBiDevCamp/AppOwnsDataMultiTenant/raw/main/wwwroot/PBIX/DatasetTemplate.pbix)** to create 
   the **Sales** dataset and the **Sales** report
 * Update dataset parameters on **Sales** dataset to point to this customer's database
 * Patch credentials for the SQL datasource used by the **Sales** dataset
