@@ -641,13 +641,13 @@ Begin by navigating to the **[Groups management
 page](https://portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/AllGroups)** in
 the Azure portal. Once you get to the **Groups** page in the Azure portal, click the **New group** link.
 
-<img src="./Docs/Images/media/image23.png" width=700 />
+<img src="./Docs/Images/media/image23.png" width=500 />
 
 In the **New Group** dialog, Select a **Group type** of **Security** and
 enter a **Group name** of **Power BI Apps**. Click the **Create** button
 to create the new Azure AD security group.
 
-<img src="./Docs/Images/media/image24.png" width=700 />
+<img src="./Docs/Images/media/image24.png" width=450 />
 
 It might take a minute or two before the group appears. Refresh the
 **All Groups** page a few times until you can verify that you can see
