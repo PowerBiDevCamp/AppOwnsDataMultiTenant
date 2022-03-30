@@ -1121,7 +1121,7 @@ Explorer** menu command.
 Expand the **Databases** node for the server you are using and verify
 you an see the new database named **AppOwnsDataMultiTenantDB**.
 
-<img src="./Docs/Images/media/image75.png"  width=600 />
+<img src="./Docs/Images/media/image75.png"  width=500 />
 
 If you expand the **Tables** node for **AppOwnsDataMultiTenantDB**, you
 should see the two tables named **Profiles** and **Tenants**.
