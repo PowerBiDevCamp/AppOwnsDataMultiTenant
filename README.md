@@ -504,7 +504,7 @@ The following screenshot shows the Access pane for a workspace whose
 membership includes a user and a service principal profile with a
 display name of Contoso.
 
-<img src="./Docs/Images/media/image13.png" width=300 />
+<img src="./Docs/Images/media/image13.png" width=350 />
 
 ### Executing API Calls under the Identity of a Service Principal Profile
 
