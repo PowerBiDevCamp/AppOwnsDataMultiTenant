@@ -685,7 +685,7 @@ the **Apply** button to save your configuration changes.
 You will see a notification indicating it might take up to 15 minutes to
 apply these changes to the organization.
 
-<img src="./Docs/Images/media/image30.png"  width=300  />
+<img src="./Docs/Images/media/image30.png"  width=350  />
 
 Now look down in the **Developer setting** section of the Power BI admin
 portal and locate and expand the section titled **Allow service
@@ -698,7 +698,7 @@ to** setting to **Specific security groups** and add the **Power BI
 Apps** security group as shown in the screenshot below. Click
 the **Apply** button to save your configuration changes.
 
-<img src="./Docs/Images/media/image32.png"  width=400  />
+<img src="./Docs/Images/media/image32.png"  width=560  />
 
 You will see another notification indicating it might take up to 15
 minutes to apply these changes to the organization. Now scroll upwards
