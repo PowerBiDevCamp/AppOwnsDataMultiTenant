@@ -1121,12 +1121,12 @@ Explorer** menu command.
 Expand the **Databases** node for the server you are using and verify
 you an see the new database named **AppOwnsDataMultiTenantDB**.
 
-<img src="./Docs/Images/media/image75.png"  width=500 />
+<img src="./Docs/Images/media/image75.png"  width=600 />
 
 If you expand the **Tables** node for **AppOwnsDataMultiTenantDB**, you
 should see the two tables named **Profiles** and **Tenants**.
 
-<img src="./Docs/Images/media/image76.png"  width=300  />
+<img src="./Docs/Images/media/image76.png"  width=240  />
 
 The **AppOwnsDataMultiTenantDB** database has now been set up and you
 are ready to run the application in the Visual Studio debugger.
