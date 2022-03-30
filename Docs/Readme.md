@@ -21,17 +21,11 @@ Published March 31, 2022
 # Table of Contents
 
 * [Developing Multitenant Applications with Power BI Embedding](#developing-multitenant-applications-with-power-bi-embedding)
-* [Understanding the 1000 Workspace Limitation](#understanding-the-1000-workspace-limitation)
-* [Managing Isolation for Datasets and Datasource Credentials](#managing-isolation-for-datasets-and-datasource-credentials)
-
-[Design Strategies Before Service Principal Profiles
-[4](#design-strategies-before-service-principal-profiles)](#design-strategies-before-service-principal-profiles)
-
-[Introduction to Service Principal Profiles
-[5](#introduction-to-service-principal-profiles)](#introduction-to-service-principal-profiles)
-
-[Service Principal Profiles as First-class Power BI Security Principals
-[5](#service-principal-profiles-as-first-class-power-bi-security-principals)](#service-principal-profiles-as-first-class-power-bi-security-principals)
+** [Understanding the 1000 Workspace Limitation](#understanding-the-1000-workspace-limitation)
+** [Managing Isolation for Datasets and Datasource Credentials](#managing-isolation-for-datasets-and-datasource-credentials)
+** [Design Strategies Before Service Principal Profiles](#design-strategies-before-service-principal-profiles)
+* [Introduction to Service Principal Profiles](#introduction-to-service-principal-profiles)
+** [Service Principal Profiles as First-class Power BI Security Principals](#service-principal-profiles-as-first-class-power-bi-security-principals)
 
 [Executing Power BI REST API Calls as a Service Principal Profile
 [6](#executing-power-bi-rest-api-calls-as-a-service-principal-profile)](#executing-power-bi-rest-api-calls-as-a-service-principal-profile)
