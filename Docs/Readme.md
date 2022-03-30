@@ -1,22 +1,20 @@
 The **AppOwnsDataMultiTenant** application is a sample .NET 6
-application which demonstrates how to design an App-Owns-data
-application using the **service principal profiles** feature introduced
-in the Power BI Service in March of 2022. This article explains how
-service principal profiles can be used to design and implement a
-large-scale, multitenant environment for Power BI embedding with
-10,000's or 100,000's of customer tenants.
+application which demonstrates how to design an application which
+implements App-Owns-Data embedding using **service principal profiles**.
+This article explains how to leverage service principal profiles to
+design and implement a large-scale, multitenant environment for Power BI
+embedding with 10,000's or 100,000's of customer tenants.
 
 This article will began with a quick primer on developing multitenant
 application using App-Owns-Data embedding. This primer will allow the
-reader to better understand **the** problems that service principal
-profiles were created to solve. Next, this article will introduce
-service principal profiles and explain how they can be used to improve
+reader to better understand the problems that service principal profiles
+were created to solve. Next, this article will introduce service
+principal profiles and explain how they can be used to improve
 performance, scalability and security in a multitenant application that
-has been developed using App-Owns-Data embedding.
-
-The article also contains step-by-step instructions to set up the
-**AppOwnsDataMultiTenant** application to get it up and running in a
-Power BI development environment.
+has been developed using App-Owns-Data embedding. The second half of
+this article contains step-by-step instructions to set up the
+**AppOwnsDataMultiTenant** application to get it up and running on your
+developer workstation.
 
 Published March 31, 2022
 
@@ -46,57 +44,60 @@ Published March 31, 2022
 [Using the Profiles API to create and manage service principal profiles
 [7](#using-the-profiles-api-to-create-and-manage-service-principal-profiles)](#using-the-profiles-api-to-create-and-manage-service-principal-profiles)
 
-[Executing API Calls Under the Identity of a Service Principal Profile
+[Executing API Calls under the Identity of a Service Principal Profile
 [9](#executing-api-calls-under-the-identity-of-a-service-principal-profile)](#executing-api-calls-under-the-identity-of-a-service-principal-profile)
 
 [Getting Started with the **AppOwnsDataMultiTenant** application
-[11](#getting-started-with-the-appownsdatamultitenant-application)](#getting-started-with-the-appownsdatamultitenant-application)
+[10](#getting-started-with-the-appownsdatamultitenant-application)](#getting-started-with-the-appownsdatamultitenant-application)
 
 [Setting up your development environment
-[12](#setting-up-your-development-environment)](#setting-up-your-development-environment)
+[11](#setting-up-your-development-environment)](#setting-up-your-development-environment)
 
 [Create an Azure AD security group named Power BI Apps
 [12](#create-an-azure-ad-security-group-named-power-bi-apps)](#create-an-azure-ad-security-group-named-power-bi-apps)
 
 [Configure Power BI tenant-level settings for service principal profile
 access
-[13](#configure-power-bi-tenant-level-settings-for-service-principal-profile-access)](#configure-power-bi-tenant-level-settings-for-service-principal-profile-access)
+[12](#configure-power-bi-tenant-level-settings-for-service-principal-profile-access)](#configure-power-bi-tenant-level-settings-for-service-principal-profile-access)
 
 [Create the Azure AD Application for
 the AppOwnsDataMultiTenant Application
-[17](#create-the-azure-ad-application-for-the-appownsdatamultitenant-application)](#create-the-azure-ad-application-for-the-appownsdatamultitenant-application)
+[15](#create-the-azure-ad-application-for-the-appownsdatamultitenant-application)](#create-the-azure-ad-application-for-the-appownsdatamultitenant-application)
 
 [Add the Azure AD Application to the Power BI Apps Group
-[21](#add-the-azure-ad-application-to-the-power-bi-apps-group)](#add-the-azure-ad-application-to-the-power-bi-apps-group)
+[19](#add-the-azure-ad-application-to-the-power-bi-apps-group)](#add-the-azure-ad-application-to-the-power-bi-apps-group)
 
 [Set Up the AppOwnsDataMultiTenant Application in Visual Studio 2022
-[22](#set-up-the-appownsdatamultitenant-application-in-visual-studio-2022)](#set-up-the-appownsdatamultitenant-application-in-visual-studio-2022)
+[20](#set-up-the-appownsdatamultitenant-application-in-visual-studio-2022)](#set-up-the-appownsdatamultitenant-application-in-visual-studio-2022)
 
 [Download the Source Code
-[22](#download-the-source-code)](#download-the-source-code)
+[20](#download-the-source-code)](#download-the-source-code)
 
 [Open the Project in Visual Studio 2022
-[22](#open-the-project-in-visual-studio-2022)](#open-the-project-in-visual-studio-2022)
+[20](#open-the-project-in-visual-studio-2022)](#open-the-project-in-visual-studio-2022)
 
 [Update application settings in the appsettings.json file
-[23](#update-application-settings-in-the-appsettings.json-file)](#update-application-settings-in-the-appsettings.json-file)
+[21](#update-application-settings-in-the-appsettings.json-file)](#update-application-settings-in-the-appsettings.json-file)
 
 [Create the AppOwnsDataMultiTenantDB database
-[24](#create-the-appownsdatamultitenantdb-database)](#create-the-appownsdatamultitenantdb-database)
+[22](#create-the-appownsdatamultitenantdb-database)](#create-the-appownsdatamultitenantdb-database)
 
 [Test the AppOwnsDataMultiTenant Application
-[28](#test-the-appownsdatamultitenant-application)](#test-the-appownsdatamultitenant-application)
+[25](#test-the-appownsdatamultitenant-application)](#test-the-appownsdatamultitenant-application)
 
-[Create New Customer Tenants
-[28](#create-new-customer-tenants)](#create-new-customer-tenants)
+[Create Customer Tenants
+[26](#create-customer-tenants)](#create-customer-tenants)
 
-[Embed Reports [32](#embed-reports)](#embed-reports)
+[Access Customer Tenants
+[28](#access-customer-tenants)](#access-customer-tenants)
+
+[Embed Reports [29](#embed-reports)](#embed-reports)
 
 [Inspect the Power BI Workspaces
-[34](#inspect-the-power-bi-workspaces)](#inspect-the-power-bi-workspaces)
+[30](#inspect-the-power-bi-workspaces)](#inspect-the-power-bi-workspaces)
 
 [Create Multiple Workspaces with a Single Service Principal Profile
-[37](#create-multiple-workspaces-with-a-single-service-principal-profile)](#create-multiple-workspaces-with-a-single-service-principal-profile)
+[32](#create-multiple-workspaces-with-a-single-service-principal-profile)](#create-multiple-workspaces-with-a-single-service-principal-profile)
 
 ## Developing Multitenant Applications with Power BI Embedding
 
@@ -117,14 +118,15 @@ refresh operations. The following diagram depicts how Power BI artifacts
 such as reports and datasets can be added into workspaces to create
 customer tenants.
 
-![](./Images/ReadMe/media/image1.png)
+<img src="./Images/media/image1.png" style="width:5.03248in;height:2.95598in" />
 
 When developing an application that implements App-Owns-Data embedding,
 it’s possible to call the Power BI REST API under the identity of a
 master user account or under the identity of a service principal.
-However, Microsoft strongly recommends using a service principal. By
-using a service principal, you can avoid common problems associated with
-master user accounts such as experiencing authentication errors in
+However, Microsoft strongly recommends using a service principal.
+
+By using a service principal, you can avoid common problems associated
+with master user accounts such as experiencing authentication errors in
 environments where users are required to log in using multi-factor
 authentication (MFA). Using a service principal is also consistent with
 the idea that App-Owns-Data embedding is based on leveraging the Power
@@ -139,7 +141,7 @@ particular, the limitation is that neither a user nor a service
 principal can be member of more than 1000 workspaces. The purpose of
 this limitation has to do with performance. The limitation exists to
 ensure code paths don't become inefficient resulting in performance
-degradation. At little background might make it easier for you to
+degradation. A little background might make it easier for you to
 understand what's involved.
 
 Behind the scenes, the Power BI Service maintains a set of
@@ -150,7 +152,7 @@ a separate access control list (ACL) for each service principal as part
 of its authorization subsystem.
 
 When a service principal calls the Power BI REST API to access a
-workspace, the Power BI service runs an security check against the
+workspace, the Power BI service runs a security check against the
 service principal's ACL to ensure it has the proper authorization. As
 you can imagine, the time it takes to determine whether the target
 workspace ID is inside the ACL increases as the number of workspaces
@@ -209,11 +211,12 @@ within the Power BI Service.
 Each dataset in the Power BI Service has an owner which can be either a
 user or a service principal. You can discover who the dataset owner is
 by inspecting the **ConfiguredBy** property in the dataset settings
-page. If it's ever required, you can perform a Take Over action to
-transfer dataset ownership from one user or service principal to
-another. If you import a PBIX file to create a new dataset using a
-service principal, the service principal is automatically configured as
-the dataset owner.
+page.
+
+If it's ever required, you can perform a Take Over action to transfer
+dataset ownership from one user or service principal to another. If you
+import a PBIX file to create a new dataset using a service principal,
+the service principal is automatically configured as the dataset owner.
 
 In order to connect a dataset to its underlying datasource, the dataset
 owner must set dataset credentials. These datasource credentials are
@@ -223,9 +226,9 @@ authenticate with the underlying datasource when refreshing the data in
 an import-mode dataset or when executing a query with a DirectQuery
 dataset.
 
-There is a common pattern used by developers when provisioning a new
-customer tenant where the application executes a series of calls all
-running as a service principal. The first call creates a new workspace.
+There is a common pattern used when provisioning a new customer tenant
+where the application executes a series of calls running under the
+identity of a service principal. The first call creates a new workspace.
 The second call associates that workspace with a dedicated capacity.
 Next, there is a call to import a PBIX file to create a new dataset.
 After importing a PBIX file to create a dataset, a service principal can
@@ -242,7 +245,7 @@ AD tenant. It's possible for a service principal to create datasource
 credentials that are used by datasets in different workspaces as shown
 in the following diagram.
 
-![](./Images/ReadMe/media/image2.png)
+<img src="./Images/media/image2.png" style="width:4.35295in;height:1.90476in" />
 
 ### Design Strategies Before Service Principal Profiles
 
@@ -326,9 +329,9 @@ In less-common scenarios where a custom application is granted the
 proper permissions, it can use the Microsoft Graph API to create new
 Azure AD applications on demand. This type of custom application becomes
 more complex to develop and deploy because it must somehow track
-credentials for each Azure AD application and gain access to those
-credentials whenever it needs to authenticate and acquire access tokens
-for individual service principals. The
+authentication credentials for each Azure AD application and gain access
+to those credentials whenever it needs to authenticate and acquire
+access tokens for individual service principals. The
 [TenantManagement](https://github.com/PowerBiDevCamp/TenantManagement)
 sample application demonstrates using this approach.
 
@@ -358,10 +361,10 @@ the context of the Power BI Service. A service principal can use the new
 [Profiles](https://docs.microsoft.com/en-us/rest/api/power-bi/profiles)
 endpoint of the Power BI REST API to create new service principal
 profiles. This makes it possible for a service principal to create and
-managed its own set of service principal profiles for a custom
+manage its own set of service principal profiles for a custom
 application as shown in the following diagram.
 
-![](./Images/ReadMe/media/image3.png)
+<img src="./Images/media/image3.png" style="width:2.73655in;height:1.87302in" />
 
 Later in this article, you will learn how to write code to create
 service principal profiles as well as how to execute Power BI REST API
@@ -393,7 +396,7 @@ owner of a dataset and the owner of datasource credentials. This leads
 to the best practice of creating a new service principal profile for
 each new customer tenant as shown in the following diagram.
 
-![](./Images/ReadMe/media/image4.png)
+<img src="./Images/media/image4.png" style="width:3.72702in;height:2in" />
 
 When you develop a custom application using service principal profiles,
 you only need a single Azure AD application which provides your
@@ -442,9 +445,9 @@ set datasource credentials. Finally, it includes API calls to query for
 workspace artifacts and to generate embed tokens.
 
 Let's walk through a simple example. Imagine you need to create a new
-customer tenant for a customer named Wingtip. The first step is to
+customer tenant for a customer named Contoso. The first step is to
 execute an API call to create a new service principal profile with a
-display name of Wingtip. That first call is made under the identity of
+display name of Contoso. That first call is made under the identity of
 the service principal. However, all the remaining Power BI REST API
 calls shown in the following list should be made under the identity of
 the service principal profile that has just been created.
@@ -472,9 +475,9 @@ And what about the service principal itself? Does the service principal
 require any access to the workspaces for customer tenants and the
 content inside? The answer is no, the service principal itself doesn't
 need any access at all. Remember, Power BI REST API calls executed under
-the identity of the service principal are mainly to create and manage
-service principal profiles. All workspace creation and content access is
-done using service principal profiles.
+the identity of the service principal are mainly used to create and
+manage service principal profiles. API calls for workspace creation and
+content access are executed as a service principal profile.
 
 ### Using the Profiles API to create and manage service principal profiles
 
@@ -501,7 +504,7 @@ table shows the details required for executing an HTTP POST request
 against the **Profiles** endpoint to create a new service principal
 profile.
 
-<img src="./Images/ReadMe/media/image5.png" style="width:4.58in;height:1.96in" />
+<img src="./Images/media/image5.png" style="width:4.1542in;height:1.77778in" />
 
 Note that you must pass a **displayName** property in the request body
 to provide a display name for the new tenant. The **displayName** must
@@ -519,18 +522,18 @@ If you are programming with the Power BI .NET SDK, you can call
 **ServicePrinicpalProfile** object which makes it possible to discover
 the **id** property value of the new profile.
 
-<img src="./Images/ReadMe/media/image6.png" style="width:6.24in;height:0.84in" />
+<img src="./Images/media/image6.png" style="width:4.28571in;height:0.57692in" />
 
 When you need to delete a service principal profile, you can execute an
 HTTP DELETE operation in which the profile id is parsed into the end of
 the URL.
 
-<img src="./Images/ReadMe/media/image7.png" style="width:4.55in;height:0.83in" />
+<img src="./Images/media/image7.png" style="width:4.52476in;height:0.8254in" />
 
 If you are programming with the Power BI .NET SDK, you can call
 **Profile.DeleteProfile** using the following code.
 
-<img src="./Images/ReadMe/media/image8.png" style="width:3.98056in;height:0.36667in" />
+<img src="./Images/media/image8.png" style="width:3.76101in;height:0.34644in" />
 
 If you need to query the set of service principal profiles associated
 with the current service principal, you can execute an HTTP GET
@@ -538,37 +541,37 @@ operation against the **Profiles** endpoint. This API calls returns a
 JSON payload with the **id** and **displayName** of each service
 principal profile.
 
-<img src="./Images/ReadMe/media/image9.png" style="width:3.91195in;height:1.96467in" />
+<img src="./Images/media/image9.png" style="width:3.11319in;height:1.56352in" />
 
 If you are programming with the Power BI .NET SDK, you can call
 **Profile.GetProfiles** using the following code.
 
-<img src="./Images/ReadMe/media/image10.png" style="width:5.38in;height:0.23in" />
+<img src="./Images/media/image10.png" style="width:5.38in;height:0.23in" />
 
 Let's say you've just created a new service principal profile and you'd
 like to add it as a member of a workspace to give it access. You can
 execute an HTTP POST operation in which the request body provides the
 following JSON with an **identifier** property with the service
-principal object ID and an inner profile object with an id property that
-contains the profile Id.
+principal object ID and an inner **profile** object with an **id**
+property that contains the profile Id.
 
-<img src="./Images/ReadMe/media/image11.png" style="width:4.16in;height:1.62in" />
+<img src="./Images/media/image11.png" style="width:3.11321in;height:1.21235in" />
 
 If you are programming with the Power BI .NET SDK, you can use the
 following code to add a service principal profile as a workspace member
 in the role of Admin.
 
-<img src="./Images/ReadMe/media/image12.png" style="width:6.40318in;height:1.63158in" />
+<img src="./Images/media/image12.png" style="width:3.77987in;height:0.96314in" />
 
-If you inspect the Access pane for a Power BI workspace in the Power BI
-Service, you can determine which accounts have been added as members.
+If you inspect the **Access** pane for a Power BI workspace in the Power
+BI Service, you can determine which accounts have been added as members.
 The following screenshot shows the Access pane for a workspace whose
-membership includes a user, a service principal and a service principal
-profile.
+membership includes a user and a service principal profile with a
+display name of Contoso.
 
-<img src="./Images/ReadMe/media/image13.png" style="width:2.40281in;height:2.50943in" alt="Graphical user interface, application Description automatically generated" />
+<img src="./Images/media/image13.png" style="width:1.75472in;height:1.83258in" alt="Graphical user interface, application Description automatically generated" />
 
-### Executing API Calls Under the Identity of a Service Principal Profile
+### Executing API Calls under the Identity of a Service Principal Profile
 
 There are two requirements for executing Power BI REST API calls under
 the identity of a service principal profile. First, you need to pass the
@@ -577,41 +580,41 @@ header. Second, you need to include a header named
 **X-PowerBI-profile-id** with the value for the service principal
 profile Id.
 
-![](./Images/ReadMe/media/image14.png)
+<img src="./Images/media/image14.png" style="width:6.95023in;height:2.07936in" />
 
 If you are using the Power BI .NET SDK, you can set the
 **X-PowerBI-profile-id** header value explicitly with the GUID for
 service principal profile Id using the following code.
 
-![](./Images/ReadMe/media/image15.png)
+<img src="./Images/media/image15.png" style="width:5.27821in;height:1.4127in" />
 
 As you can see from the previous code listing, once you have added the
 **X-PowerBI-profile-id** header to the **PowerBIClient** object, you can
 just call Power BI REST API operations such as **Groups.GetGroups** as
 you normally would and the call will be executed under the identity of a
-service principal.
+service principal profile.
 
 There is a second way to set the **X-PowerBI-profile-id** header for a
 **PowerBIClient** object. More specifically, you can initialize a
 **PowerBIClient** object by passing the GUID for a profile id in the
-constructor as shown in the following example.
+constructor using this code.
 
-![](./Images/ReadMe/media/image16.png)
+<img src="./Images/media/image16.png" style="width:5.43219in;height:1.04762in" />
 
 As you program a multitenant application, you need to switch back and
 forth between executing calls as the parent service principal and
-executing calls as a service principal profile. One strategy is to use a
-class-level property of type **PowerBIClient** named **pbiClient** and a
-method named **SetCallingContext** to switch between caller identities.
+executing calls as a service principal profile. One strategy to manage
+context switching is to use a class-level **PowerBIClient** property
+named **pbiClient** and a method named **SetCallingContext** which can
+be called to switch between caller identities.
 
-![](./Images/ReadMe/media/image17.png)
+<img src="./Images/media/image17.png" style="width:4.13498in;height:1.44444in" />
 
 Now, let's say you need to create or manage a service principal profile.
-You can call **SetCallingContext** without passing a parameter so calls
-afterwards will execute under the identity of the service principal as
-shown in the following code.
+You can call **SetCallingContext** without any parameter so calls
+afterwards will execute under the identity of the service principal.
 
-![](./Images/ReadMe/media/image18.png)
+<img src="./Images/media/image18.png" style="width:4.48071in;height:1.22222in" />
 
 When you need to create and configure a new workspace for a new customer
 tenant, you want to execute that code as a service principal profile.
@@ -619,7 +622,7 @@ Therefore, you should call **SetCallingContext** and pass the profile id
 so that Power BI REST operations called afterwards are executed as a
 service principal profile and not as the parent service principal.
 
-![](./Images/ReadMe/media/image19.png)
+<img src="./Images/media/image19.png" style="width:4.13229in;height:1.71429in" />
 
 Once you have used a specific service principal profile to create and
 configure a workspace, you should use that same service principal
@@ -628,7 +631,7 @@ following code shows how to execute code as a service principal profile
 when retrieving embedding metadata and an embed token used to embed a
 report on a web page.
 
-![](./Images/ReadMe/media/image20.png)
+<img src="./Images/media/image20.png" style="width:4.7328in;height:2.66667in" />
 
 ## Getting Started with the **AppOwnsDataMultiTenant** application
 
@@ -650,7 +653,7 @@ the user to create a new customer tenant. When using the application,
 you can enter the **Tenant Name** for a new customer and the details of
 the customer's database.
 
-![](./Images/ReadMe/media/image21.png)
+<img src="./Images/media/image21.png" style="width:4.03754in;height:2.14286in" />
 
 When you click the **Create New Tenant** button, the application
 responds by executing code which begins by creating a new service
@@ -662,7 +665,7 @@ application design maintains a one-to-one relationship between service
 principal profiles and customer tenant workspaces which is what
 Microsoft recommends as a best practice.
 
-![](./Images/ReadMe/media/image22.png)
+<img src="./Images/media/image22.png" style="width:3.62135in;height:1.68254in" />
 
 Keep in mind that **AppOwnsDataMultiTenant** is a proof-of-concept (POC)
 that doesn't include certain behavior that would be required in any
@@ -681,11 +684,11 @@ the **AppOwnsDataMultiTenant** application for testing. To complete
 these steps, you will require a Microsoft 365 tenant in which you have
 permissions to create and manage Azure AD applications and security
 groups. You will also need Power BI Service administrator permissions to
-configure tenant-level settings for Power BI to give service principals
-to ability to access the Power BI Service API. If you do not have a
-Microsoft 365 environment for development and testing, you can create
-one with free trial licenses by following the steps in [Create a
-Development Environment for Power BI
+configure tenant-level settings for Power BI to enable service
+principals and service principal profiles with the ability to access the
+Power BI Service API. If you do not have a Microsoft 365 environment for
+development and testing, you can create one with free trial licenses by
+following the steps in [Create a Development Environment for Power BI
 Embedding](https://github.com/PowerBiDevCamp/Camp-Sessions/raw/master/Create%20Power%20BI%20Development%20Environment.pdf).
 
 To set up the **AppOwnsDataMultiTenant** application for testing, you
@@ -700,10 +703,8 @@ tenant by completing the following tasks.
 -   Configure Power BI tenant-level settings to enable service principal
     profiles
 
--   Create the Azure AD Application for
+-   Create and configure the Azure AD Application for
     the **AppOwnsDataMultiTenant** Application
-
-The following sections will walk you through each of these setup tasks.
 
 ### Create an Azure AD security group named Power BI Apps
 
@@ -712,19 +713,19 @@ page](https://portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlad
 the Azure portal. Once you get to the **Groups** page in the Azure
 portal, click the **New group** link.
 
-![](./Images/ReadMe/media/image23.png)
+<img src="./Images/media/image23.png" style="width:4in;height:1.50915in" />
 
 In the **New Group** dialog, Select a **Group type** of **Security** and
 enter a **Group name** of **Power BI Apps**. Click the **Create** button
 to create the new Azure AD security group.
 
-![](./Images/ReadMe/media/image24.png)
+<img src="./Images/media/image24.png" style="width:3.34921in;height:2.06797in" />
 
 It might take a minute or two before the group appears. Refresh the
 **All Groups** page a few times until you can verify that you can see
 the new security group named **Power BI Apps** in the list of groups.
 
-![](./Images/ReadMe/media/image25.png)
+<img src="./Images/media/image25.png" style="width:4.84306in;height:1.77083in" />
 
 ### Configure Power BI tenant-level settings for service principal profile access
 
@@ -734,73 +735,79 @@ Power BI Service admin portal at <https://app.powerbi.com/admin-portal>.
 In the Power BI Admin portal, click the **Tenant settings** link on the
 left.
 
-<img src="./Images/ReadMe/media/image26.png" style="width:3.08902in;height:2.01754in" alt="Graphical user interface, application Description automatically generated" />
+<img src="./Images/media/image26.png" style="width:2.60041in;height:1.69841in" alt="Graphical user interface, application Description automatically generated" />
 
 Move down in the **Developer settings** section and expand the **Allow
 service principals to use Power BI APIs** section.
 
-<img src="./Images/ReadMe/media/image27.png" style="width:3.31579in;height:2.04355in" alt="Graphical user interface, application Description automatically generated" />
+<img src="./Images/media/image27.png" style="width:3.55419in;height:2.19048in" alt="Graphical user interface, application Description automatically generated" />
 
 Note that the **Allow service principals to use Power BI APIs** setting
 is initially set to **Disabled**.
 
-<img src="./Images/ReadMe/media/image28.png" style="width:4.10862in;height:2in" alt="Graphical user interface, text, application, email Description automatically generated" />
+<img src="./Images/media/image28.png" style="width:4.69557in;height:2.28571in" alt="Graphical user interface, text, application, email Description automatically generated" />
 
 Change the setting to **Enabled**. After that, set the **Apply
 to** setting to **Specific security groups** and add the **Power BI
 Apps** security group as shown in the screenshot below. Click
 the **Apply** button to save your configuration changes.
 
-<img src="./Images/ReadMe/media/image29.png" style="width:4.04948in;height:2.66667in" alt="Graphical user interface, text, application Description automatically generated" />
+<img src="./Images/media/image29.png" style="width:4.33873in;height:2.85714in" alt="Graphical user interface, text, application Description automatically generated" />
 
 You will see a notification indicating it might take up to 15 minutes to
 apply these changes to the organization.
 
-<img src="./Images/ReadMe/media/image30.png" style="width:2.55346in;height:0.46017in" alt="Text Description automatically generated with medium confidence" />
+<img src="./Images/media/image30.png" style="width:3.17083in;height:0.57143in" alt="Text Description automatically generated with medium confidence" />
 
 Now look down in the **Developer setting** section of the Power BI admin
 portal and locate and expand the section titled **Allow service
 principals to create and use profiles**.
 
-![](./Images/ReadMe/media/image31.png)
+<img src="./Images/media/image31.png" style="width:3.22222in;height:1.69784in" />
 
 Change the setting to **Enabled**. After that, set the **Apply
 to** setting to **Specific security groups** and add the **Power BI
 Apps** security group as shown in the screenshot below. Click
 the **Apply** button to save your configuration changes.
 
-![](./Images/ReadMe/media/image32.png)
+<img src="./Images/media/image32.png" style="width:3.5873in;height:2.23783in" />
 
 You will see another notification indicating it might take up to 15
-minutes to apply these changes to the organization. Now scroll upward in
-the **Tenant setting** section of the Power BI admin portal and
+minutes to apply these changes to the organization. Now scroll upwards
+in the **Tenant setting** section of the Power BI admin portal and
 locate **Workspace settings**.
 
-<img src="./Images/ReadMe/media/image33.png" style="width:4.97693in;height:2.49123in" alt="Graphical user interface, application, Teams Description automatically generated" />
+<img src="./Images/media/image33.png" style="width:3.53968in;height:1.77181in" alt="Graphical user interface, application, Teams Description automatically generated" />
 
 Note that a Power BI tenant has an older policy by default where users
 require permissions to create Office 365 groups in order to create new
 Power BI workspaces. You must reconfigure this setting so that service
 principal profiles will be able to create new workspaces.
 
-<img src="./Images/ReadMe/media/image34.png" style="width:4.0351in;height:2.03145in" alt="Graphical user interface, text, application, email Description automatically generated" />
+<img src="./Images/media/image34.png" style="width:3.24748in;height:1.63492in" alt="Graphical user interface, text, application, email Description automatically generated" />
 
 In **Workspace settings**, set **Apply to : The entire
 organization** and click the **Apply** button to save your changes.
 
-<img src="./Images/ReadMe/media/image35.png" style="width:4.94737in;height:2.91775in" alt="Graphical user interface, text, application Description automatically generated" />
+<img src="./Images/media/image35.png" style="width:3.45347in;height:2.04028in" />
+
+There is one more tenant-level setting that must be enabled for the
+**AppOwnsDataMultiTenant** application to work correctly. That is the
+tenant-level setting which makes it possible to use map visuals. Locate
+the **Integration settings** section in **Tenant settings**. Inside the
+that section locate and expand the setting named **Map and filled map
+visuals**.
+
+<img src="./Images/media/image36.png" style="width:4.05139in;height:1.90625in" />
+
+Enable the **Map and filled map visuals** setting and then click
+**Apply**.
+
+<img src="./Images/media/image37.png" style="width:2.58333in;height:1.75in" />
 
 You have now completed the configuration of Power BI tenant-level
 settings. Now you can move ahead to create the Azure AD application that
 will be used by the **AppOwnsDataMultiTenant** application.
-
-Enable setting for map
-
-![](./Images/ReadMe/media/image36.png)
-
-Zzzz
-
-![](./Images/ReadMe/media/image37.png)
 
 ### Create the Azure AD Application for the **AppOwnsDataMultiTenant** Application
 
@@ -809,25 +816,25 @@ by navigating to the [App
 registration](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) page
 in the Azure portal and click the **New registration** link.
 
-![](./Images/ReadMe/media/image38.png)
+<img src="./Images/media/image38.png" style="width:4.98889in;height:1.30208in" />
 
 On the **Register an application** page, enter an application name such
 as **Power BI Embedding Tenant Manager** and accept the default
 selection for **Supported account types** of **Accounts in this
 organizational directory only**.
 
-![](./Images/ReadMe/media/image39.png)
+<img src="./Images/media/image39.png" style="width:4.50972in;height:1.88542in" />
 
 Complete the following steps in the **Redirect URI** section.
 
--   Set the dropdown selection of **Web** in the dropdown box
+-   Set the dropdown selection to **Web** in the dropdown box
 
 -   Do not enter a value for the **Redirect URI**. Leave it blank.
 
 -   Click the **Register** button to create the new Azure AD
     application.
 
-![](./Images/ReadMe/media/image40.png)
+<img src="./Images/media/image40.png" style="width:6.16083in;height:1.92063in" />
 
 After creating a new Azure AD application in the Azure portal, you
 should see the Azure AD application overview page which displays
@@ -836,7 +843,7 @@ called the ***Client ID***, so don't let this confuse you. You will need
 to copy this Application ID and store it so you can use it later to
 configure the project's support for Client Credentials Flow.
 
-![](./Images/ReadMe/media/image41.png)
+<img src="./Images/media/image41.png" style="width:5.29998in;height:1.39683in" />
 
 Copy the **Tenant ID** (aka Directory ID) and paste it into a text
 document so you can use it later in the setup process. Note that
@@ -844,17 +851,17 @@ this **Tenant ID** value will be used
 by **AppOwnsDataMultiTenant** project to configure authentication with
 Azure AD.
 
-![](./Images/ReadMe/media/image42.png)
+<img src="./Images/media/image42.png" style="width:4.22652in;height:1.55556in" />
 
 Next, repeat the same step by copying the **Client ID** and copying that
 into the text document as well.
 
-![](./Images/ReadMe/media/image43.png)
+<img src="./Images/media/image43.png" style="width:3.66135in;height:1.31746in" />
 
 Your text document should now contain the **Tenant ID** and **Client
 ID**  as shown in the following screenshot.
 
-![](./Images/ReadMe/media/image44.png)
+<img src="./Images/media/image44.png" style="width:3.10904in;height:1.34921in" />
 
 Next, you need to create a Client Secret for the application. Click on
 the **Certificates & secrets** link in the left navigation to move to
@@ -862,51 +869,54 @@ the **Certificates & secrets** page. On the **Client secrets** tab,
 click the **New client secret** button as shown in the following
 screenshot.
 
-![](./Images/ReadMe/media/image45.png)
+<img src="./Images/media/image45.png" style="width:5.26543in;height:2.01587in" />
 
 In the **Add a client secret** dialog, add a text description such
 as **Test Secret** and then click the **Add** button to create the new
 Client Secret.
 
-<img src="./Images/ReadMe/media/image46.png" style="width:4.05263in;height:1.84534in" alt="Graphical user interface, text, application, email Description automatically generated" />
+<img src="./Images/media/image46.png" style="width:3.20694in;height:1.46042in" />
 
 Once you have created the Client Secret, you should be able to see
 its **Value** in the **Client secrets** section. Click on the **Copy to
-clipboard** button to copy the Client Secret into the clipboard.
+clipboard** button to copy the **Value** for the **Client Secret** into
+the clipboard.
 
-![](./Images/ReadMe/media/image47.png)
+<img src="./Images/media/image47.png" style="width:5.83264in;height:1.19792in" />
 
 Paste the **Client Secret** into the same text document with
 the **Client ID** and **Tenant ID**.
 
-![](./Images/ReadMe/media/image48.png)
+<img src="./Images/media/image48.png" style="width:3.19459in;height:1.74603in" />
 
 At this point, you have the Tenant Id, Client Id and Client Secret. This
 is all you need to authenticate with Azure AD to acquire an access token
 for the service principal. However, you need to capture one more GUID
-for the service principal object Id. You will need this Id value if you
-need to add the service principal as a member in a Power BI workspace.
+for the service principal object Id. You will need this Id value in any
+scenario where you need to add the service principal of one of its
+profiles as a member in a Power BI workspace.
 
-Navigate back to the Overview page for the new Azure AD application. Now
-click on the link so see details on the Managed application in local
-tenant as shown in the following screenshot to navigate to the
-application's **Properties** page.
+Navigate back to the Overview page for the new Azure AD application.
+Click the **Managed application in local directory** link as shown in
+the following screenshot to navigate to the application's **Properties**
+page.
 
-![](./Images/ReadMe/media/image49.png)
+<img src="./Images/media/image49.png" style="width:6.79365in;height:1.59148in" alt="Text Description automatically generated" />
 
 On the **Properties** page, locate the **Object ID** value and copy it
 to the clipboard. This value represents the service principal object Id.
 
-![](./Images/ReadMe/media/image50.png)
+<img src="./Images/media/image50.png" style="width:3.60044in;height:1.73016in" />
 
 Now paste the service principal into the text document with the other
 values as shown in the following screenshot.
 
-![](./Images/ReadMe/media/image51.png)
+<img src="./Images/media/image51.png" style="width:2.85714in;height:1.68498in" />
 
 Save the text file so you don’t accidently close it and lose the
 configuration data inside. You will copy and paste these Id values into
-the **AppOwnsDataMultiTenant** project in the next section.
+the **AppOwnsDataMultiTenant** project later when you set up the
+application for testing.
 
 ### Add the Azure AD Application to the Power BI Apps Group
 
@@ -918,28 +928,28 @@ and locate the security group created earlier named **Power BI Apps**.
 Click on the **Power BI Apps** link to drill into the summary page for
 this security group.
 
-![](./Images/ReadMe/media/image52.png)
+<img src="./Images/media/image52.png" style="width:4.47653in;height:1.74603in" />
 
-On the **Power BI Apps** summary page, click the **Members** link to
-drill navigate to the **Members** page.
+On the **Power BI Apps** security group summary page, click the
+**Members** link to navigate to the **Members** page.
 
-![](./Images/ReadMe/media/image53.png)
+<img src="./Images/media/image53.png" style="width:3.44127in;height:1.31736in" />
 
 On the **Members** page, click the **Add members** link to display the
 **Add members** pane.
 
-![](./Images/ReadMe/media/image54.png)
+<img src="./Images/media/image54.png" style="width:3.30757in;height:0.69841in" />
 
 In the **Add members** pane, locate and select the **Power BI Embedding
 Tenant Manager** application. Add this application to the **Power BI
 Apps** security group.
 
-![](./Images/ReadMe/media/image55.png)
+<img src="./Images/media/image55.png" style="width:3.61441in;height:1.2381in" />
 
 Verify that the **Power BI Embedding Tenant Manager** application is now
 a member of the **Power BI Apps** group.
 
-![](./Images/ReadMe/media/image56.png)
+<img src="./Images/media/image56.png" style="width:3.93449in;height:1.76191in" />
 
 You are now finished in configuring Azure AD for the application setup.
 
@@ -987,7 +997,7 @@ named **AppOwnsDataMultiTenant** which contains several files including
 a solution file named **AppOwnsDataMultiTenant.sln** and a project file
 named **AppOwnsDataMultiTenant.csproj**.
 
-![](./Images/ReadMe/media/image57.png)
+<img src="./Images/media/image57.png" style="width:2.80952in;height:1.84986in" alt="Graphical user interface, text, application, email Description automatically generated" />
 
 ### Open the Project in Visual Studio 2022
 
@@ -997,18 +1007,18 @@ named **AppOwnsDataMultiTenant.sln**. You should note that this
 development project has been built as a .NET 6 MVC Web Application as
 shown in the following screenshot.
 
-![](./Images/ReadMe/media/image58.png)
+<img src="./Images/media/image58.png" style="width:1.70833in;height:2.10417in" />
 
 Let's quickly review the NuGet packages that have been installed in
 the **AppOwnsDataMultiTenant** project. There are several NuGet packages
-which add Entity Framework support which make it possible to quickly
+which add Entity Framework support which makes it possible to quickly
 create the SQL Server database associated with this project. There is a
 package included to add Azure AD authentication support named
 **Microsoft.Identity.Web**. The package
 named **Microsoft.PowerBI.Api** is the Power BI .NET SDK which has been
 included to support .NET programming with the Power BI REST API.
 
-![](./Images/ReadMe/media/image59.png)
+<img src="./Images/media/image59.png" style="width:3.51436in;height:2.3522in" />
 
 ### Update application settings in the appsettings.json file
 
@@ -1018,14 +1028,14 @@ the **appsettings.json** file. Open the **appsettings.json** file and
 examine the JSON content inside. There are three important sections
 named **AzureAd**, **AppOwnsDataMultiTenantDB** and **DemoSettings**.
 
-![](./Images/ReadMe/media/image60.png)
+<img src="./Images/media/image60.png" style="width:4.77642in;height:1.8805in" />
 
 Inside the **AzureAd** section, update
 the **TenantId**, **ClientId** and **ClientSecret** with the data you
 collected when creating the Azure AD application named **Power BI Tenant
 Management Application.**
 
-![](./Images/ReadMe/media/image61.png)
+<img src="./Images/media/image61.png" style="width:3.16352in;height:0.91654in" />
 
 Now let's examine the **AppOwnsDataMultiTenantDB** section and the
 setting inside named **ConnectString**. This is the connection string
@@ -1038,7 +1048,7 @@ create the **AppOwnsDataMultiTenantDB** database in a different
 location, you can update the value of this connection string to point to
 a different server.
 
-![](./Images/ReadMe/media/image62.png)
+<img src="./Images/media/image62.png" style="width:7.50972in;height:0.76042in" />
 
 In the **DemoSettings** section there is a property named **AdminUser**.
 The reason that this property exists has to with you being able to view
@@ -1053,7 +1063,7 @@ Update the **AdminUser** setting with your Azure AD account name so that
 you will be able to see all the Power BI workspaces created by this
 application.
 
-![](./Images/ReadMe/media/image63.png)
+<img src="./Images/media/image63.png" style="width:3.22847in;height:0.61458in" />
 
 In the **DemoSettings** section there is a property
 named **ServicePrincipalObjectId**. The reason this property exists has
@@ -1062,12 +1072,12 @@ as a workspace member. Update the **ServicePrincipalObjectId** setting
 with the value you Service Principal Object Id value you collected
 earlier.
 
-![](./Images/ReadMe/media/image64.png)
+<img src="./Images/media/image64.png" style="width:4.38472in;height:0.72917in" />
 
 In the **DemoSettings** section there is a property
 named **CapacityId**. The reason this property exists has to do with
 automating the step of associating new workspaces with a premium
-capacity. If you have the GUID-based ID for a premium capacity you can
+capacity. If you have the GUID-based ID for a premium capacity, you can
 update this setting and the application will automatically associate new
 workspaces with this capacity each time it creates a new workspace. If
 you don't have a Capacity ID, that is not a problem. Simply leave the
@@ -1102,7 +1112,7 @@ that you shouldn't make any changes to **AppOwnsDataMultiTenantDB.cs**.
 You are just going to inspect the file to understand how
 the **AppOwnsDataMultiTenantDB** database is structured.
 
-![](./Images/ReadMe/media/image65.png)
+<img src="./Images/media/image65.png" style="width:4.72847in;height:2.05208in" />
 
 When you inspect the code inside **AppOwnsDataMultiTenantDB.cs**, you
 will see a class named **AppOwnsDataMultiTenantDB** that derives
@@ -1112,13 +1122,13 @@ The **AppOwnsDataMultiTenantDB** class serves as the top-level class for
 the Entity Framework which contains two **DBSet** properties
 named **Profiles** and **Tenants**.
 
-![](./Images/ReadMe/media/image66.png)
+<img src="./Images/media/image66.png" style="width:5.14514in;height:1.42708in" />
 
 When you generate the database, each of these **DBSet** properties will
 be created as database tables. The **Profiles** table is generated using
 the table schema defined by the **AppProfile** class.
 
-![](./Images/ReadMe/media/image67.png)
+<img src="./Images/media/image67.png" style="width:3.83264in;height:1.04167in" />
 
 As you saw earlier, Power BI tracks an **id** and **displayName**
 property for each profile. The **AppProfile** class defines
@@ -1130,7 +1140,7 @@ metadata about each service principal profile it creates.
 The **Tenants** table is generated using the table schema defined by
 the **CustomerTenant** class.
 
-![](./Images/ReadMe/media/image68.png)
+![](./Images/media/image68.png)
 
 After you have inspected the code used to generated the database, close
 the source file named **AppOwnsDataMultiTenantDB.cs** without saving any
@@ -1140,12 +1150,12 @@ project database named **AppOwnsDataMultiTenantDB**.
 Open the Package Manager console using **Tools \> NuGet Package Manager
 \> Package Manager Console**.
 
-![](./Images/ReadMe/media/image69.png)
+<img src="./Images/media/image69.png" style="width:6.98889in;height:2.10417in" />
 
 You should see the **Package Manager Console** command prompt where you
 can execute PowerShell commands.
 
-![](./Images/ReadMe/media/image70.png)
+<img src="./Images/media/image70.png" style="width:4.87302in;height:1.87956in" />
 
 Type and execute the following **Add-Migration** command to create a new
 Entity Framework migration in the project.
@@ -1156,7 +1166,7 @@ The **Add-Migration** command should run without errors. If this command
 fails you might have to modify the database connection string
 in **appsettings.json**.
 
-![](./Images/ReadMe/media/image71.png)
+<img src="./Images/media/image71.png" style="width:3.84306in;height:1.01042in" />
 
 After running the **Add-Migration** command, you will see a new folder
 has been added to the project named **Migrations** with several C#
@@ -1164,7 +1174,7 @@ source files. There is no need to change anything in these source files
 but you can inspect what's inside them if you are curious how the Entity
 Framework does its work.
 
-![](./Images/ReadMe/media/image72.png)
+<img src="./Images/media/image72.png" style="width:2.25in;height:1.86458in" />
 
 Return to the **Package Manager Console** and run the
 following **Update-Database** command to generate the database
@@ -1175,24 +1185,24 @@ Update-Database
 The **Update-Database** command should run and generate the database
 named **AppOwnsDataMultiTenantDB**.
 
-<img src="./Images/ReadMe/media/image73.png" style="width:4.82456in;height:1.40459in" alt="Graphical user interface, text, application, email Description automatically generated" />
+<img src="./Images/media/image73.png" style="width:4.82456in;height:1.40459in" alt="Graphical user interface, text, application, email Description automatically generated" />
 
 In Visual Studio, you can use the **SQL Server Object Explorer** to see
 the database that has just been created. Open the **SQL Server Object
 Explorer** by invoking the **View \>** **SQL Server Object
 Explorer** menu command.
 
-![](./Images/ReadMe/media/image74.png)
+<img src="./Images/media/image74.png" style="width:3.62431in;height:1.1875in" />
 
 Expand the **Databases** node for the server you are using and verify
 you an see the new database named **AppOwnsDataMultiTenantDB**.
 
-![](./Images/ReadMe/media/image75.png)
+<img src="./Images/media/image75.png" style="width:3.38472in;height:1.09375in" />
 
 If you expand the **Tables** node for **AppOwnsDataMultiTenantDB**, you
 should see the two tables named **Profiles** and **Tenants**.
 
-![](./Images/ReadMe/media/image76.png)
+<img src="./Images/media/image76.png" style="width:2.09375in;height:1.22917in" />
 
 The **AppOwnsDataMultiTenantDB** database has now been set up and you
 are ready to run the application in the Visual Studio debugger.
@@ -1201,177 +1211,175 @@ are ready to run the application in the Visual Studio debugger.
 
 Launch the **AppOwnsDataMultiTenant**  application in the Visual Studio
 debugger by pressing the **{F5}** key or clicking the Visual
-Studio **Play** button with the green arrow and the caption **IIS
-Express**.
+Studio **Play** button with the green arrow and the
+caption **AppOwnsDataMultiTenant**.
 
-![](./Images/ReadMe/media/image77.png)
+<img src="./Images/media/image77.png" style="width:7.36389in;height:1.5625in" />
 
 When the application starts, you should see its welcome page as shown in
 the following screenshot.
 
-![](./Images/ReadMe/media/image78.png)
+<img src="./Images/media/image78.png" style="width:5.60347in;height:1.41667in" />
 
-Now that the application is up and running, it's time to create the
-first customer tenant.
+### Create Customer Tenants
 
-### Create New Customer Tenants
+Now it's time to create your first customer tenant. Start by navigating
+to the **Tenants** page.
 
-Navigate to the **Tenants** page.
-
-![](./Images/ReadMe/media/image79.png)
+<img src="./Images/media/image79.png" style="width:4.16597in;height:0.76042in" />
 
 Click the **Onboard New Tenant** button to display the **Onboard New
 Tenant** page.
 
-![](./Images/ReadMe/media/image80.png)
+<img src="./Images/media/image80.png" style="width:4.25972in;height:1.09375in" />
 
 On the **Onboard New Tenant** page, enter a **Tenant Name** of
 **Wingtip**. Leave all the other input elements with their default
 values. Click to **Create New Tenant** button to begin the process of
 creating a new customer tenant.
 
-![](./Images/ReadMe/media/image81.png)
+<img src="./Images/media/image81.png" style="width:4.49916in;height:2.44654in" />
 
 What happens when you click the **Create New Tenant** button? The
 **AppOwnsDataMultiTenant** application uses the Power BI REST API to
-create a service principal profile using same name as Tenant Name. After
-the service principal profile is created, the application then switches
-contexts and executes the following API calls under the identity of the
-new service principal profile.
+create a service principal profile using same name as **Tenant Name**.
+After the service principal profile is created, the application then
+switches contexts and executes the following API calls under the
+identity of the new service principal profile.
 
 -   Create a new Power BI workspace
 
 -   Upload a [template PBIX
     file](https://github.com/PowerBiDevCamp/AppOwnsDataMultiTenant/raw/main/wwwroot/PBIX/DatasetTemplate.pbix) to
-    create the Sales dataset and the Sales report
+    create the **Sales** dataset and the **Sales** report
 
--   Update dataset parameters on Sales dataset to point to this
+-   Update dataset parameters on **Sales** dataset to point to this
     customer's database
 
--   Patch credentials for the SQL datasource used by the Sales dataset
+-   Patch credentials for the SQL datasource used by
+    the **Sales** dataset
 
--   Start a refresh operation on the Sales database
+-   Start a refresh operation on the **Sales** database
 
 While this work is going on, the application's user is shown an animated
 image.
 
-<img src="./Images/ReadMe/media/image82.png" style="width:1.66733in;height:1.16352in" />
+<img src="./Images/media/image82.png" style="width:2.36131in;height:1.6478in" />
 
 After a few seconds, you should see the new customer tenant has been
 created.
 
-![](./Images/ReadMe/media/image83.png)
+<img src="./Images/media/image83.png" style="width:5.20764in;height:1.21875in" />
 
 Click the **Onboard New Tenant** button again to create a second tenant.
 This time, set **Tenant Name** to **Contoso** and select
 **ContosoSales** from the dropdown list for **Database Name**. After
 that, click **Create New Tenant**.
 
-![](./Images/ReadMe/media/image84.png)
+<img src="./Images/media/image84.png" style="width:4.03175in;height:1.98684in" />
 
-You should now have two customer tenants. Note they each tenant has a
-different **Profile**.
+You should now have two customer tenants. Note that each tenant has been
+created using a different profile.
 
-![](./Images/ReadMe/media/image85.png)
+<img src="./Images/media/image85.png" style="width:5.24931in;height:1.29167in" />
 
-Now let's discuss what's going on behind the scenes.
+Click the **Profiles** link to examine each of the profiles that have
+been created.
 
-![](./Images/ReadMe/media/image86.png)
+<img src="./Images/media/image86.png" style="width:5.03056in;height:1.55208in" />
 
-The **AppOwnsDataMultiTenant** application also create a new record in
-the **Tenants** table of the **AppOwnsDataMultiTenantDB** database. Note
-that the profile associated with this customer tenant is tracked in
-the **ProfileName** column.
+Let's examine what has been stored in the **Profiles** table in
+**AppOwnsDataMultiTenantDB** database. Note that **ProfileName** column
+serves as the primary key of the **Profiles** table
 
-![](./Images/ReadMe/media/image87.png)
+<img src="./Images/media/image87.png" style="width:3.25972in;height:0.52083in" />
 
-Xxxxx
+The application also added new records to the **Tenants** table. Note
+that the **ProfileName** column in the **Tenants** table serves as a
+foreign key so that each record in **Tenants** is associated with
+exactly one record in **Profiles**.
 
-![](./Images/ReadMe/media/image88.png)
+<img src="./Images/media/image88.png" style="width:7.49931in;height:0.5in" />
 
-xxxx
+Now click the **Power BI Profiles** link. When you navigate to this
+page, the application calls the **Get Profiles** operation of the Power
+BI REST API to retrieve all the profiles that have been created by the
+application's service principal.
 
-![](./Images/ReadMe/media/image89.png)
+![](./Images/media/image89.png)
 
-Xxxx
+If you use a developer tool such as Fiddler, you can inspect the call to
+**Get Profiles** to see the JSON response.
 
-![](./Images/ReadMe/media/image90.png)
+<img src="./Images/media/image90.png" style="width:5.21806in;height:1.92708in" />
 
-xxx
+### Access Customer Tenants
 
-Navigate back to the Tenants page
+Now that you have created two tenants, it's time to access their
+content. Navigate back to the **Tenants** page.
 
-![](./Images/ReadMe/media/image79.png)
+<img src="./Images/media/image79.png" style="width:4.16597in;height:0.76042in" />
 
-Click on the **View** button for a specific tenant on the **Power BI
-Tenants** page to drill into the **Tenant Details** page.
+Click on the **View** button for a specific tenant on the 
+**Tenants** page to drill into the **Tenant Details** page.
 
-![](./Images/ReadMe/media/image91.png)
+<img src="./Images/media/image91.png" style="width:7.00972in;height:1.09375in" />
 
 The **Tenant Details** page displays Power BI workspace details
 including its members, datasets and reports.
 
-![](./Images/ReadMe/media/image92.png)
+<img src="./Images/media/image92.png" style="width:4.85347in;height:2.65625in" />
 
-Sss
+If you use a developer tool such as Fiddler, you can inspect the API
+call to retrieve workspace members as well as the API calls to retrieve
+collections for datasets and reports in the target workspace. Note that
+each of these calls is made under the identity of a service principal
+profile as evidenced by the existence of the **X-PowerBI-profile-id**
+header.
 
-![](./Images/ReadMe/media/image93.png)
+<img src="./Images/media/image93.png" style="width:5.75972in;height:1.36458in" />
 
-Click on the back arrow to return to the **Power BI Tenants** page.
-
-![](./Images/ReadMe/media/image94.png)
-
-If you're interested, you can examine the details of other tenants as
-well.
+Click on the back arrow to return to the
+**Tenants** page.<img src="./Images/media/image94.png" style="width:4.14465in;height:1.16107in" />
 
 ### Embed Reports
 
 Now it's time to make use of
 the **AppOwnsDataMultiTenant** application's ability to embed reports.
-When navigate to the **Embed** page for a customer tenant,
-the **AppOwnsDataMultiTenant** application must acquire an access token
-for whichever app identity was used to create the customer tenant. The
-service principal that is configured as the **Owner** of a tenant will
-be the only service principal who will have access to access the target
-workspace in Power BI.
+On the **Tenants** page, click the **Embed** button for the **Contoso**
+tenant to navigate to the **Embed** page.
 
-Move to the **Power BI Tenants** page and click on the **Embed** button
-for the first customer tenant.
+<img src="./Images/media/image95.png" style="width:5.00629in;height:1.24041in" />
 
-![](./Images/ReadMe/media/image95.png)
+You should now see a page with an embedded report for the Contoso
+tenant.
 
-You should now see a page with an embedded report for that tenant. When
-you click the **Embed** button to embed a report for a customer tenant,
-the **TenanantManagement** application retrieves credentials for the app
-identity associated with the tenant from
-the **AppOwnsDataMultiTenantDB** database. It then uses those
-credentials to acquire an access token from Azure AD using Client
-Credentials Flow. That access token is then used to communicate with the
-Power BI Service to retrieve report metadata and generate an embed token
-for the embedding process.
+<img src="./Images/media/image96.png" style="width:3.51643in;height:2.0566in" />
 
-![](./Images/ReadMe/media/image96.png)
+Click on the back arrow button to return to the **Tenants** page and
+click the **Embed** button for the Wingtip tenant.
 
-Click on the back arrow button to return to the **Tenants** page.
+<img src="./Images/media/image97.png" style="width:5.8805in;height:1.46218in" />
 
-![](./Images/ReadMe/media/image97.png)
+You should now see that the application is able to embed a report from
+any customer tenant.
 
-Now test clicking the **Embed** button for other customer tenants. As
-you can see, the **AppOwnsDataMultiTenant** application has the ability
-to acquire access tokens for any of the Azure AD applications that it
-has created.
+<img src="./Images/media/image98.png" style="width:4.55556in;height:2.64343in" />
 
-![](./Images/ReadMe/media/image98.png)
+When a user navigates to the **Embed** page for a customer tenant, the
+application must determine which service principal profile was used to
+create the target workspace. The application performs a lookup in the
+**AppOwnsDataMultiTenantDB** database to determine which service
+principal profile id is associated with the target workspace. The
+application is then able to query for workspace artifacts and to
+generate the embed token using that service principal profile's
+identity.
 
-Xxxx
+If you use a developer tool such as Fiddler, you can see that calls to
+access a workspace and to generate embed tokens includes the
+**PowerBI-profile-id** header as shown in the following screenshot.
 
-![](./Images/ReadMe/media/image99.png)
-
-Xxx
-
-Xxx
-
-<img src="./Images/ReadMe/media/image100.png" style="width:6.32705in;height:2.28945in" alt="Graphical user interface, text, application Description automatically generated" />
+<img src="./Images/media/image99.png" style="width:7.1063in;height:2.57143in" alt="Graphical user interface, text, application Description automatically generated" />
 
 ### Inspect the Power BI Workspaces
 
@@ -1381,51 +1389,130 @@ at [https://app.powerbi.com](https://app.powerbi.com/). You should be
 able to see and navigate to any of the Power BI workspaces that have
 been created by the **AppOwnsDataMultiTenant** application.
 
-![](./Images/ReadMe/media/image101.png)
+<img src="./Images/media/image100.png" style="width:1.88542in;height:1.92708in" />
 
-Navigate to one of these **workspaces** such as **Contoso**.
+Navigate to one of these workspaces such as the workspace
+named **Contoso**.
 
-![](./Images/ReadMe/media/image102.png)
+<img src="./Images/media/image101.png" style="width:4.1746in;height:1.44306in" />
 
-Xxxx
+Click the **Access** button to display the **Access** pane for the
+Contoso workspace.
 
-![](./Images/ReadMe/media/image103.png)
+<img src="./Images/media/image102.png" style="width:3.8254in;height:1.18706in" />
 
-Xxx
+On the workspace **Access** pane, you should see two members including
+your user account and a service principal profile.
 
-![](./Images/ReadMe/media/image104.png)
+<img src="./Images/media/image103.png" style="width:2.12698in;height:2.28325in" />
 
-xx
+Close the **Access** pane and then drill into the **Setting** page for
+the dataset named **Sales**.
 
-Drill into the **Setting** page for the dataset named **Sales**.
-
-![](./Images/ReadMe/media/image105.png)
+<img src="./Images/media/image104.png" style="width:3.04762in;height:1.60647in" />
 
 You should be able to verify that the **Sales** dataset has been
-configured by one of the Azure AD applications that was created by
-the **AppOwnsDataMultiTenant** application. You should also be able to
-see the **Last refresh succeeded** message for the dataset refresh
-operation that was started by the **AppOwnsDataMultiTenant** as part of
-its tenant onboarding logic.
+configured by a service principal profile which is evidenced by the
+**Service Principal Profile Object ID** as shown in the following
+screenshot.
 
-<img src="./Images/ReadMe/media/image106.png" style="width:6.99371in;height:1.58459in" alt="Graphical user interface, application Description automatically generated" />
+<img src="./Images/media/image105.png" style="width:5.53968in;height:1.25515in" alt="Graphical user interface, application Description automatically generated" />
 
 ### Create Multiple Workspaces with a Single Service Principal Profile
 
 At this point you have used the **AppOwnsDataMultiTenant** application
-to pool app identities where one service principal can be the owner of
-multiple customer tenants. While this approach will work for many
-organizations and ISVs using Power BI embedding, you can take things one
-step further by creating a new service principal each time you create a
-new customer tenant. An application design which maintains a one-to-one
-relation between service principals and customer tenants will provide
-the most secure level of isolation. When you pool a service principal
-across tenants, that service principal will be the owner of datasource
-credentials for more than a single client.
+to create customer tenants that each have their own distinct service
+principal profile. This is generally considered as a best practice to
+maintain a one-to-one relationship between service principal profiles
+and customer tenants as it will provide the best performance and the
+most secure level of isolation.
 
-When creating a new customer tenant using the **Onboard New
-Tenant** page, you can select the option to **Create Tenant using New
-Exclusive App Identity**. If you select this option,
-the **AppOwnsDataMultiTenant** application will create a new Azure AD
-application and then use the service principal from that application to
-create the workspace in Power BI.
+However, there could be less-common scenarios where you'd like to have a
+single service principal profile create and manage two or more customer
+tenants. For example, let's say you need to create two separate customer
+tenants for different divisions of a single organization. You will now
+test out how the **AppOwnsDataMultiTenant** application allows for this
+scenario.
+
+Click on the **Profile** link to navigate to the **Profiles** page and
+then click the **Add new profile** button. On the **Create New Profile**
+page, enter a **Profile Name** of **Acme Profile** and click **Add New
+Profile to Pool** button.
+
+<img src="./Images/media/image106.png" style="width:4.20126in;height:0.98338in" />
+
+You should see a new profile named **Acme Profile** has been created
+with **Exclusive** equals **False** and **Tenants** equals **0**.
+
+<img src="./Images/media/image107.png" style="width:5.01185in;height:1.01887in" />
+
+The **Exclusive** value is set to **False** because the profile can be
+used to create multiple tenants. The **Tenants** value equals **0**
+because this profile is not yet associated with any tenants. Now it's
+time to create two tenants for this profile. Click the **Tenants** link
+to navigate to the **Tenants** page and then click the **Onboard New
+Tenant** button.
+
+<img src="./Images/media/image108.png" style="width:3.33333in;height:0.70904in" />
+
+On the **Onboard New Tenant** page…
+
+1.  Enter a **Tenant Name** of **Acme Corp USA**.
+
+2.  Select a **Database Name** of **AcmeCorpSales**.
+
+3.  In the **Profile** section, select the option to **Create Tenant
+    using Service Principal Profile from Pool**
+
+4.  Select the pre-existing profile named **Acme Profile**.
+
+When your page matches the following screenshot, click the **Create New
+Tenant**.
+
+<img src="./Images/media/image109.png" style="width:4.03774in;height:2.10586in" />
+
+Now you will create a second tenant which uses the profile named **Acme
+Profile**. On the **Tenants** page, click the **Onboard New Tenant**
+button to display the **Onboard New Tenant** page.
+
+On the **Onboard New Tenant** page…
+
+1.  Enter a **Tenant Name** of **Acme Corp Europe**
+
+2.  Select a **Database Name** of **AcmeCorpSales**
+
+3.  Select the option to **Create Tenant using Service Principal Profile
+    from Pool**
+
+4.  Select **Acme Profile**.
+
+5.  Click **Create New Tenant**.
+
+<img src="./Images/media/image110.png" style="width:3.69182in;height:1.92871in" />
+
+You should see that you have now created two separate customer tenants
+that are both associated with **Acme Profile**.
+
+<img src="./Images/media/image111.png" style="width:4.48428in;height:1.14257in" />
+
+Click the **Profile** link to navigate to the **Profiles** page. If you
+inspect the profile named **Acme Profile**, you can see it now has a
+tenant count of **2**.
+
+<img src="./Images/media/image112.png" style="width:4.2327in;height:1.41106in" />
+
+Note that each profile has a value for the **Exclusive** property. This
+property serves two purposes. First, it's used to determine which
+profiles are added to the dropdown list of pooled profiles on the
+**Onboard New Tenant** page. This dropdown list will only contain
+profiles with an **Exclusive** property value of **False**.
+
+![](./Images/media/image113.png)
+
+The second purpose of the **Exclusive** property is to determine whether
+to automatically delete a service principal profile from the Power BI
+Service and from the **AppOwnsDataMultiTenantDB** database when a
+customer tenant is deleted. When you delete a customer tenant that is
+associated with an exclusive profile, this profile is automatically
+deleted along with the customer tenant and it's underlying Power BI
+workspace.
