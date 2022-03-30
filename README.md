@@ -1235,12 +1235,12 @@ If you use a developer tool such as Fiddler, you can inspect the call to
 Now that you have created two tenants, it's time to access their
 content. Navigate back to the **Tenants** page.
 
-<img src="./Docs/Images/media/image79.png"  width=600  />
+<img src="./Docs/Images/media/image79.png"  width=400  />
 
 Click on the **View** button for a specific tenant on the 
 **Tenants** page to drill into the **Tenant Details** page.
 
-<img src="./Docs/Images/media/image91.png"  width=600  />
+<img src="./Docs/Images/media/image91.png"  width=700  />
 
 The **Tenant Details** page displays Power BI workspace details
 including its members, datasets and reports.
