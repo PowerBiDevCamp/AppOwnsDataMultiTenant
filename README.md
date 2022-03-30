@@ -983,7 +983,7 @@ Update the **AdminUser** setting with your Azure AD account name so that
 you will be able to see all the Power BI workspaces created by this
 application.
 
-<img src="./Docs/Images/media/image63.png"  width=480   />
+<img src="./Docs/Images/media/image63.png"  width=460   />
 
 In the **DemoSettings** section there is a property
 named **ServicePrincipalObjectId**. The reason this property exists has
