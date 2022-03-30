@@ -194,7 +194,7 @@ AD tenant. It's possible for a service principal to create datasource
 credentials that are used by datasets in different workspaces as shown
 in the following diagram.
 
-<img src="./Docs/Images/media/image2.png" style="width:4.74843in;height:2.11349in" alt="Graphical user interface, diagram, application Description automatically generated" />
+<img src="./Docs/Images/media/image2.png" width=600 />
 
 ### Design Strategies Before Service Principal Profiles
 
