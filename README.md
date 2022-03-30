@@ -1272,7 +1272,7 @@ tenant to navigate to the **Embed** page.
 
 You should now see a page with an embedded report for the Contoso tenant.
 
-<img src="./Docs/Images/media/image96.png"  width=600  />
+<img src="./Docs/Images/media/image96.png"  width=620  />
 
 Click on the back arrow button to return to the **Tenants** page and
 click the **Embed** button for the Wingtip tenant.
@@ -1282,7 +1282,7 @@ click the **Embed** button for the Wingtip tenant.
 You should now see that the application is able to embed a report from
 any customer tenant.
 
-<img src="./Docs/Images/media/image98.png"  width=600  />
+<img src="./Docs/Images/media/image98.png"  width=620  />
 
 When a user navigates to the **Embed** page for a customer tenant, the
 application must determine which service principal profile was used to
