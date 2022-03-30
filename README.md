@@ -288,12 +288,9 @@ The previous section discussed three essential problems that need to be
 addressed when developing a multitenant application that uses
 App-Owns-Data embedding. Here is a summary of those three problems.
 
-1.  Scaling to a large number of workspaces
-
-2.  Optimizing performance in calls to the Power BI REST API
-
-3.  Isolating datasets and datasource credentials at the customer tenant
-    level.
+* Scaling to a large number of workspaces
+* Optimizing performance in calls to the Power BI REST API
+* Isolating datasets and datasource credentials at the customer tenant level
 
 The Power BI embedding team created the service principal profiles
 feature to solve these three problems with the lowest amount of
