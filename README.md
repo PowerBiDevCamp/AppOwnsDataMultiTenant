@@ -730,7 +730,7 @@ visuals**.
 
 Enable the **Map and filled map visuals** setting and then click **Apply**.
 
-<img src="./Docs/Images/media/image37.png"  width=400  />
+<img src="./Docs/Images/media/image37.png"  width=450  />
 
 You have now completed the configuration of Power BI tenant-level
 settings. Now you can move ahead to create the Azure AD application that
@@ -743,14 +743,14 @@ by navigating to the [App
 registration](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) page
 in the Azure portal and click the **New registration** link.
 
-<img src="./Docs/Images/media/image38.png" width=600 />
+<img src="./Docs/Images/media/image38.png" width=500 />
 
 On the **Register an application** page, enter an application name such
 as **Power BI Embedding Tenant Manager** and accept the default
 selection for **Supported account types** of **Accounts in this
 organizational directory only**.
 
-<img src="./Docs/Images/media/image39.png" width=600  />
+<img src="./Docs/Images/media/image39.png" width=500  />
 
 Complete the following steps in the **Redirect URI** section.
 
