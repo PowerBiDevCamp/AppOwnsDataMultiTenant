@@ -588,7 +588,7 @@ the user to create a new customer tenant. When using the application,
 you can enter the **Tenant Name** for a new customer and the details of
 the customer's database.
 
-<img src="./Docs/Images/media/image21.png" style="width:4.03754in;height:2.14286in" />
+<img src="./Docs/Images/media/image21.png"  />
 
 When you click the **Create New Tenant** button, the application
 responds by executing code which begins by creating a new service
