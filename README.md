@@ -698,14 +698,14 @@ to** setting to **Specific security groups** and add the **Power BI
 Apps** security group as shown in the screenshot below. Click
 the **Apply** button to save your configuration changes.
 
-<img src="./Docs/Images/media/image32.png"  width=560  />
+<img src="./Docs/Images/media/image32.png"  width=600  />
 
 You will see another notification indicating it might take up to 15
 minutes to apply these changes to the organization. Now scroll upwards
 in the **Tenant setting** section of the Power BI admin portal and
 locate **Workspace settings**.
 
-<img src="./Docs/Images/media/image33.png"  width=600  />
+<img src="./Docs/Images/media/image33.png"  width=500  />
 
 Note that a Power BI tenant has an older policy by default where users
 require permissions to create Office 365 groups in order to create new
