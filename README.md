@@ -1070,12 +1070,12 @@ project database named **AppOwnsDataMultiTenantDB**.
 Open the Package Manager console using **Tools \> NuGet Package Manager
 \> Package Manager Console**.
 
-<img src="./Docs/Images/media/image69.png"  width=700  />
+<img src="./Docs/Images/media/image69.png"  width=900  />
 
 You should see the **Package Manager Console** command prompt where you
 can execute PowerShell commands.
 
-<img src="./Docs/Images/media/image70.png"  width=700  />
+<img src="./Docs/Images/media/image70.png"  width=900  />
 
 Type and execute the following **Add-Migration** command to create a new
 Entity Framework migration in the project.
