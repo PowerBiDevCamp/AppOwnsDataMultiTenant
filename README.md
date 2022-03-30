@@ -766,7 +766,7 @@ called the ***Client ID***, so don't let this confuse you. You will need
 to copy this Application ID and store it so you can use it later to
 configure the project's support for Client Credentials Flow.
 
-<img src="./Docs/Images/media/image41.png"  width=800  />
+<img src="./Docs/Images/media/image41.png"  width=700  />
 
 Copy the **Tenant ID** (aka Directory ID) and paste it into a text
 document so you can use it later in the setup process. Note that
@@ -774,7 +774,7 @@ this **Tenant ID** value will be used
 by **AppOwnsDataMultiTenant** project to configure authentication with
 Azure AD.
 
-<img src="./Docs/Images/media/image42.png"  width=600  />
+<img src="./Docs/Images/media/image42.png"  width=480  />
 
 Next, repeat the same step by copying the **Client ID** and copying that
 into the text document as well.
