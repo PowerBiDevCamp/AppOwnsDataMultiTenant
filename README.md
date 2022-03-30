@@ -1401,7 +1401,7 @@ On the **Onboard New Tenant** page…
 You should see that you have now created two separate customer tenants
 that are both associated with **Acme Profile**.
 
-<img src="./Docs/Images/media/image111.png"  width=600 />
+<img src="./Docs/Images/media/image111.png"  width=800 />
 
 Click the **Profile** link to navigate to the **Profiles** page. If you
 inspect the profile named **Acme Profile**, you can see it now has a
