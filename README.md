@@ -1382,7 +1382,7 @@ On the **Onboard New Tenant** page…
 When the **Onboard New Tenant** page matches the following screenshot, click the **Create New
 Tenant**.
 
-<img src="./Docs/Images/media/image109.png"  width=800  />
+<img src="./Docs/Images/media/image109.png"  width=900  />
 
 Now you will create a second tenant which uses the profile named **Acme
 Profile**. On the **Tenants** page, click the **Onboard New Tenant**
