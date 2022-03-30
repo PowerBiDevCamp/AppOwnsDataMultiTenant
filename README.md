@@ -1,3 +1,4 @@
+### Summary
 The **AppOwnsDataMultiTenant** application is a sample .NET 6
 application which demonstrates how to design an application which
 implements App-Owns-Data embedding using **service principal profiles**.
@@ -16,7 +17,7 @@ this article contains step-by-step instructions to set up the
 **AppOwnsDataMultiTenant** application to get it up and running on your
 developer workstation.
 
-Published March 31, 2022
+This article is also available for download as a [Word document](https://github.com/PowerBiDevCamp/AppOwnsDataMultiTenant/raw/main/Docs/AppOwnsDataMultiTenant.docx)  or a [PDF file](https://github.com/PowerBiDevCamp/AppOwnsDataMultiTenant/raw/main/Docs/AppOwnsDataMultiTenant.pdf)
 
 # Table of Contents
 
