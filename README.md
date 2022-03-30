@@ -557,7 +557,7 @@ Therefore, you should call **SetCallingContext** and pass the profile id
 so that Power BI REST operations called afterwards are executed as a
 service principal profile and not as the parent service principal.
 
-<img src="./Docs/Images/media/image19.png"  width=850 />
+<img src="./Docs/Images/media/image19.png"  width=700 />
 
 Once you have used a specific service principal profile to create and
 configure a workspace, you should use that same service principal
@@ -566,7 +566,7 @@ following code shows how to execute code as a service principal profile
 when retrieving embedding metadata and an embed token used to embed a
 report on a web page.
 
-<img src="./Docs/Images/media/image20.png"  width=750 />
+<img src="./Docs/Images/media/image20.png"  width=800 />
 
 ## Getting Started with the **AppOwnsDataMultiTenant** application
 
