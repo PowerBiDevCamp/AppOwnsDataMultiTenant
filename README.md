@@ -1181,7 +1181,7 @@ identity of the new service principal profile.
 While this work is going on, the application's user is shown an animated
 image.
 
-<img src="./Docs/Images/media/image82.png"  width=400  />
+<img src="./Docs/Images/media/image82.png"  width=300  />
 
 After a few seconds, you should see the new customer tenant has been
 created.
