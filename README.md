@@ -515,13 +515,13 @@ header. Second, you need to include a header named
 **X-PowerBI-profile-id** with the value for the service principal
 profile Id.
 
-<img src="./Docs/Images/media/image14.png" style="width:6.95023in;height:2.07936in" />
+<img src="./Docs/Images/media/image14.png" width=750 />
 
 If you are using the Power BI .NET SDK, you can set the
 **X-PowerBI-profile-id** header value explicitly with the GUID for
 service principal profile Id using the following code.
 
-<img src="./Docs/Images/media/image15.png" style="width:5.27821in;height:1.4127in" />
+<img src="./Docs/Images/media/image15.png" width=750 />
 
 As you can see from the previous code listing, once you have added the
 **X-PowerBI-profile-id** header to the **PowerBIClient** object, you can
@@ -534,7 +534,7 @@ There is a second way to set the **X-PowerBI-profile-id** header for a
 **PowerBIClient** object by passing the GUID for a profile id in the
 constructor using this code.
 
-<img src="./Docs/Images/media/image16.png" style="width:5.43219in;height:1.04762in" />
+<img src="./Docs/Images/media/image16.png"  width=750 />
 
 As you program a multitenant application, you need to switch back and
 forth between executing calls as the parent service principal and
@@ -543,13 +543,13 @@ context switching is to use a class-level **PowerBIClient** property
 named **pbiClient** and a method named **SetCallingContext** which can
 be called to switch between caller identities.
 
-<img src="./Docs/Images/media/image17.png" style="width:4.13498in;height:1.44444in" />
+<img src="./Docs/Images/media/image17.png"  width=750 />
 
 Now, let's say you need to create or manage a service principal profile.
 You can call **SetCallingContext** without any parameter so calls
 afterwards will execute under the identity of the service principal.
 
-<img src="./Docs/Images/media/image18.png" style="width:4.48071in;height:1.22222in" />
+<img src="./Docs/Images/media/image18.png"  width=750 />
 
 When you need to create and configure a new workspace for a new customer
 tenant, you want to execute that code as a service principal profile.
@@ -557,7 +557,7 @@ Therefore, you should call **SetCallingContext** and pass the profile id
 so that Power BI REST operations called afterwards are executed as a
 service principal profile and not as the parent service principal.
 
-<img src="./Docs/Images/media/image19.png" style="width:4.13229in;height:1.71429in" />
+<img src="./Docs/Images/media/image19.png"  width=750 />
 
 Once you have used a specific service principal profile to create and
 configure a workspace, you should use that same service principal
@@ -566,7 +566,7 @@ following code shows how to execute code as a service principal profile
 when retrieving embedding metadata and an embed token used to embed a
 report on a web page.
 
-<img src="./Docs/Images/media/image20.png" style="width:4.7328in;height:2.66667in" />
+<img src="./Docs/Images/media/image20.png"  width=750 />
 
 ## Getting Started with the **AppOwnsDataMultiTenant** application
 
