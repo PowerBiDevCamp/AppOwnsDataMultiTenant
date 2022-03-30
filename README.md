@@ -515,7 +515,7 @@ header. Second, you need to include a header named
 **X-PowerBI-profile-id** with the value for the service principal
 profile Id.
 
-<img src="./Docs/Images/media/image14.png" width=750 />
+<img src="./Docs/Images/media/image14.png" />
 
 If you are using the Power BI .NET SDK, you can set the
 **X-PowerBI-profile-id** header value explicitly with the GUID for
