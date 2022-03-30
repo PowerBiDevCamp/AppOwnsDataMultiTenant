@@ -805,12 +805,12 @@ its **Value** in the **Client secrets** section. Click on the **Copy to
 clipboard** button to copy the **Value** for the **Client Secret** into
 the clipboard.
 
-<img src="./Docs/Images/media/image47.png"  width=600  />
+<img src="./Docs/Images/media/image47.png"  width=700  />
 
 Paste the **Client Secret** into the same text document with
 the **Client ID** and **Tenant ID**.
 
-<img src="./Docs/Images/media/image48.png"  width=600  />
+<img src="./Docs/Images/media/image48.png"  width=350  />
 
 At this point, you have the Tenant Id, Client Id and Client Secret. This
 is all you need to authenticate with Azure AD to acquire an access token
