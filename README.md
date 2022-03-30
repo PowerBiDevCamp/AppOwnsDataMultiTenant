@@ -730,7 +730,7 @@ visuals**.
 
 Enable the **Map and filled map visuals** setting and then click **Apply**.
 
-<img src="./Docs/Images/media/image37.png"  width=350  />
+<img src="./Docs/Images/media/image37.png"  width=400  />
 
 You have now completed the configuration of Power BI tenant-level
 settings. Now you can move ahead to create the Azure AD application that
@@ -743,25 +743,22 @@ by navigating to the [App
 registration](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) page
 in the Azure portal and click the **New registration** link.
 
-<img src="./Docs/Images/media/image38.png" style="width:4.98889in;height:1.30208in" />
+<img src="./Docs/Images/media/image38.png" width=600 />
 
 On the **Register an application** page, enter an application name such
 as **Power BI Embedding Tenant Manager** and accept the default
 selection for **Supported account types** of **Accounts in this
 organizational directory only**.
 
-<img src="./Docs/Images/media/image39.png" style="width:4.50972in;height:1.88542in" />
+<img src="./Docs/Images/media/image39.png" width=600  />
 
 Complete the following steps in the **Redirect URI** section.
 
--   Set the dropdown selection to **Web** in the dropdown box
+* Set the dropdown selection to **Web** in the dropdown box
+* Do not enter a value for the **Redirect URI**. Leave it blank.
+* Click the **Register** button to create the new Azure AD application.
 
--   Do not enter a value for the **Redirect URI**. Leave it blank.
-
--   Click the **Register** button to create the new Azure AD
-    application.
-
-<img src="./Docs/Images/media/image40.png" style="width:6.16083in;height:1.92063in" />
+<img src="./Docs/Images/media/image40.png"  width=600  />
 
 After creating a new Azure AD application in the Azure portal, you
 should see the Azure AD application overview page which displays
@@ -770,7 +767,7 @@ called the ***Client ID***, so don't let this confuse you. You will need
 to copy this Application ID and store it so you can use it later to
 configure the project's support for Client Credentials Flow.
 
-<img src="./Docs/Images/media/image41.png" style="width:5.29998in;height:1.39683in" />
+<img src="./Docs/Images/media/image41.png"  width=600  />
 
 Copy the **Tenant ID** (aka Directory ID) and paste it into a text
 document so you can use it later in the setup process. Note that
@@ -778,17 +775,17 @@ this **Tenant ID** value will be used
 by **AppOwnsDataMultiTenant** project to configure authentication with
 Azure AD.
 
-<img src="./Docs/Images/media/image42.png" style="width:4.22652in;height:1.55556in" />
+<img src="./Docs/Images/media/image42.png"  width=600  />
 
 Next, repeat the same step by copying the **Client ID** and copying that
 into the text document as well.
 
-<img src="./Docs/Images/media/image43.png" style="width:3.66135in;height:1.31746in" />
+<img src="./Docs/Images/media/image43.png"  width=600  />
 
 Your text document should now contain the **Tenant ID** and **Client
 ID**  as shown in the following screenshot.
 
-<img src="./Docs/Images/media/image44.png" style="width:3.10904in;height:1.34921in" />
+<img src="./Docs/Images/media/image44.png"  width=600  />
 
 Next, you need to create a Client Secret for the application. Click on
 the **Certificates & secrets** link in the left navigation to move to
@@ -796,25 +793,25 @@ the **Certificates & secrets** page. On the **Client secrets** tab,
 click the **New client secret** button as shown in the following
 screenshot.
 
-<img src="./Docs/Images/media/image45.png" style="width:5.26543in;height:2.01587in" />
+<img src="./Docs/Images/media/image45.png"  width=600  />
 
 In the **Add a client secret** dialog, add a text description such
 as **Test Secret** and then click the **Add** button to create the new
 Client Secret.
 
-<img src="./Docs/Images/media/image46.png" style="width:3.20694in;height:1.46042in" />
+<img src="./Docs/Images/media/image46.png"  width=600  />
 
 Once you have created the Client Secret, you should be able to see
 its **Value** in the **Client secrets** section. Click on the **Copy to
 clipboard** button to copy the **Value** for the **Client Secret** into
 the clipboard.
 
-<img src="./Docs/Images/media/image47.png" style="width:5.83264in;height:1.19792in" />
+<img src="./Docs/Images/media/image47.png"  width=600  />
 
 Paste the **Client Secret** into the same text document with
 the **Client ID** and **Tenant ID**.
 
-<img src="./Docs/Images/media/image48.png" style="width:3.19459in;height:1.74603in" />
+<img src="./Docs/Images/media/image48.png"  width=600  />
 
 At this point, you have the Tenant Id, Client Id and Client Secret. This
 is all you need to authenticate with Azure AD to acquire an access token
@@ -828,17 +825,17 @@ Click the **Managed application in local directory** link as shown in
 the following screenshot to navigate to the application's **Properties**
 page.
 
-<img src="./Docs/Images/media/image49.png" style="width:6.79365in;height:1.59148in" alt="Text Description automatically generated" />
+<img src="./Docs/Images/media/image49.png"  width=600  />
 
 On the **Properties** page, locate the **Object ID** value and copy it
 to the clipboard. This value represents the service principal object Id.
 
-<img src="./Docs/Images/media/image50.png" style="width:3.60044in;height:1.73016in" />
+<img src="./Docs/Images/media/image50.png"  width=600  />
 
 Now paste the service principal into the text document with the other
 values as shown in the following screenshot.
 
-<img src="./Docs/Images/media/image51.png" style="width:2.85714in;height:1.68498in" />
+<img src="./Docs/Images/media/image51.png"  width=600 />
 
 Save the text file so you don’t accidently close it and lose the
 configuration data inside. You will copy and paste these Id values into
