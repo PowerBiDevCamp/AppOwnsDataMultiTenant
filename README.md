@@ -726,7 +726,7 @@ the **Integration settings** section in **Tenant settings**. Inside the
 that section locate and expand the setting named **Map and filled map
 visuals**.
 
-<img src="./Docs/Images/media/image36.png"  width=600 />
+<img src="./Docs/Images/media/image36.png"  width=500 />
 
 Enable the **Map and filled map visuals** setting and then click **Apply**.
 
