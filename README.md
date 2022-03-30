@@ -906,7 +906,9 @@ If you are familiar with the **git** utility, you can clone the project
 source files to your local developer workstation using the
 following **git** command.
 
+```ps
 git clone https://github.com/PowerBiDevCamp/AppOwnsDataMultiTenant.git
+```
 
 Once you have downloaded the source files for
 the **AppOwnsDataMultiTenant** repository to your developer workstation,
