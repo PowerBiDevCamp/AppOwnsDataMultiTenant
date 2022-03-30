@@ -938,7 +938,7 @@ package included to add Azure AD authentication support named
 named **Microsoft.PowerBI.Api** is the Power BI .NET SDK which has been
 included to support .NET programming with the Power BI REST API.
 
-<img src="./Docs/Images/media/image59.png" width=400  />
+<img src="./Docs/Images/media/image59.png" width=500  />
 
 ### Update application settings in the appsettings.json file
 
