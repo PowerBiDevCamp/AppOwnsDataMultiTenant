@@ -824,12 +824,12 @@ Click the **Managed application in local directory** link as shown in
 the following screenshot to navigate to the application's **Properties**
 page.
 
-<img src="./Docs/Images/media/image49.png"  width=600  />
+<img src="./Docs/Images/media/image49.png"  width=720  />
 
 On the **Properties** page, locate the **Object ID** value and copy it
 to the clipboard. This value represents the service principal object Id.
 
-<img src="./Docs/Images/media/image50.png"  width=600  />
+<img src="./Docs/Images/media/image50.png"  width=400  />
 
 Now paste the service principal into the text document with the other
 values as shown in the following screenshot.
