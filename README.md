@@ -1060,7 +1060,7 @@ metadata about each service principal profile it creates.
 The **Tenants** table is generated using the table schema defined by
 the **CustomerTenant** class.
 
-![](./Images/media/image68.png)
+<img src="./Docs/Images/media/image68.png"  width=480  />
 
 After you have inspected the code used to generated the database, close
 the source file named **AppOwnsDataMultiTenantDB.cs** without saving any
