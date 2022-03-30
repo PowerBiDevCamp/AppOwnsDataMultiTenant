@@ -834,7 +834,7 @@ to the clipboard. This value represents the service principal object Id.
 Now paste the service principal into the text document with the other
 values as shown in the following screenshot.
 
-<img src="./Docs/Images/media/image51.png"  width=300 />
+<img src="./Docs/Images/media/image51.png"   />
 
 Save the text file so you don’t accidently close it and lose the
 configuration data inside. You will copy and paste these Id values into
