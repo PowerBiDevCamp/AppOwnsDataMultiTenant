@@ -917,7 +917,7 @@ named **AppOwnsDataMultiTenant** which contains several files including
 a solution file named **AppOwnsDataMultiTenant.sln** and a project file
 named **AppOwnsDataMultiTenant.csproj**.
 
-<img src="./Docs/Images/media/image57.png" style="width:2.80952in;height:1.84986in" alt="Graphical user interface, text, application, email Description automatically generated" />
+<img src="./Docs/Images/media/image57.png" with=600 />
 
 ### Open the Project in Visual Studio 2022
 
