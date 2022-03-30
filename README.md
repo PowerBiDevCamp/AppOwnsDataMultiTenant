@@ -1193,12 +1193,12 @@ This time, set **Tenant Name** to **Contoso** and select
 **ContosoSales** from the dropdown list for **Database Name**. After
 that, click **Create New Tenant**.
 
-<img src="./Docs/Images/media/image84.png"  width=700  />
+<img src="./Docs/Images/media/image84.png"  width=600  />
 
 You should now have two customer tenants. Note that each tenant has been
 created using a different profile.
 
-<img src="./Docs/Images/media/image85.png"  width=600  />
+<img src="./Docs/Images/media/image85.png"  width=700  />
 
 Click the **Profiles** link to examine each of the profiles that have
 been created.
