@@ -753,7 +753,6 @@ organizational directory only**.
 <img src="./Docs/Images/media/image39.png" width=500  />
 
 Complete the following steps in the **Redirect URI** section.
-
 * Set the dropdown selection to **Web** in the dropdown box
 * Do not enter a value for the **Redirect URI**. Leave it blank.
 * Click the **Register** button to create the new Azure AD application.
