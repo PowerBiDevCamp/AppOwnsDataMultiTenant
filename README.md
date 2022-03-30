@@ -1096,7 +1096,7 @@ source files. There is no need to change anything in these source files
 but you can inspect what's inside them if you are curious how the Entity
 Framework does its work.
 
-<img src="./Docs/Images/media/image72.png"  width=700 />
+<img src="./Docs/Images/media/image72.png"  width=400 />
 
 Return to the **Package Manager Console** and run the
 following **Update-Database** command to generate the database
