@@ -457,7 +457,7 @@ If you are programming with the Power BI .NET SDK, you can call
 **ServicePrinicpalProfile** object which makes it possible to discover
 the **id** property value of the new profile.
 
-<img src="./Docs/Images/media/image6.png" width=600 />
+<img src="./Docs/Images/media/image6.png" width=700 />
 
 When you need to delete a service principal profile, you can execute an
 HTTP DELETE operation in which the profile id is parsed into the end of
@@ -481,7 +481,7 @@ principal profile.
 If you are programming with the Power BI .NET SDK, you can call
 **Profile.GetProfiles** using the following code.
 
-<img src="./Docs/Images/media/image10.png" width=600 />
+<img src="./Docs/Images/media/image10.png" width=500 />
 
 Let's say you've just created a new service principal profile and you'd
 like to add it as a member of a workspace to give it access. You can
