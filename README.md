@@ -900,8 +900,8 @@ repository at the following URL.
 [**https://github.com/PowerBiDevCamp/AppOwnsDataMultiTenant**](https://github.com/PowerBiDevCamp/TenantManagement)
 
 You can download the **AppOwnsDataMultiTenant** project source files in
-a single ZIP archive using [this
-link](https://github.com/PowerBiDevCamp/AppOwnsDataMultiTenant/archive/refs/heads/main.zip).
+a single ZIP archive using **[this
+link](https://github.com/PowerBiDevCamp/AppOwnsDataMultiTenant/archive/refs/heads/main.zip)**.
 If you are familiar with the **git** utility, you can clone the project
 source files to your local developer workstation using the
 following **git** command.
