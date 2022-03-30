@@ -917,7 +917,7 @@ named **AppOwnsDataMultiTenant** which contains several files including
 a solution file named **AppOwnsDataMultiTenant.sln** and a project file
 named **AppOwnsDataMultiTenant.csproj**.
 
-<img src="./Docs/Images/media/image57.png" with=600 />
+<img src="./Docs/Images/media/image57.png" with=400 />
 
 ### Open the Project in Visual Studio 2022
 
