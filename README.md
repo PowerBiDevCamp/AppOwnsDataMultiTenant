@@ -308,7 +308,7 @@ profiles. This makes it possible for a service principal to create and
 manage its own set of service principal profiles for a custom
 application as shown in the following diagram.
 
-<img src="./Docs/Images/media/image3.png" width=350 />
+<img src="./Docs/Images/media/image3.png" width=300 />
 
 Later in this article, you will learn how to write code to create
 service principal profiles as well as how to execute Power BI REST API
