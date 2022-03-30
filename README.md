@@ -396,17 +396,12 @@ the service principal. However, all the remaining Power BI REST API
 calls shown in the following list should be made under the identity of
 the service principal profile that has just been created.
 
--   Create workspace
-
--   Associated workspace with capacity
-
--   Import PBIX
-
--   Update dataset parameters
-
--   Set credentials
-
--   Start refresh
+* Create workspace
+* Associated workspace with capacity
+* Import PBIX
+* Update dataset parameters
+* Set credentials
+* Start refresh
 
 Now, let's make one final observation. Each customer tenant is built
 using a Power BI workspace and a set of artifacts that are all owned and
