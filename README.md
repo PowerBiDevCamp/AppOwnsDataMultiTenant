@@ -792,13 +792,13 @@ the **Certificates & secrets** page. On the **Client secrets** tab,
 click the **New client secret** button as shown in the following
 screenshot.
 
-<img src="./Docs/Images/media/image45.png"  width=700  />
+<img src="./Docs/Images/media/image45.png"  width=600  />
 
 In the **Add a client secret** dialog, add a text description such
 as **Test Secret** and then click the **Add** button to create the new
 Client Secret.
 
-<img src="./Docs/Images/media/image46.png"  width=500  />
+<img src="./Docs/Images/media/image46.png"  width=400  />
 
 Once you have created the Client Secret, you should be able to see
 its **Value** in the **Client secrets** section. Click on the **Copy to
