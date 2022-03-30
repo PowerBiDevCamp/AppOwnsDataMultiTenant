@@ -557,7 +557,7 @@ Therefore, you should call **SetCallingContext** and pass the profile id
 so that Power BI REST operations called afterwards are executed as a
 service principal profile and not as the parent service principal.
 
-<img src="./Docs/Images/media/image19.png"  width=750 />
+<img src="./Docs/Images/media/image19.png"  width=850 />
 
 Once you have used a specific service principal profile to create and
 configure a workspace, you should use that same service principal
