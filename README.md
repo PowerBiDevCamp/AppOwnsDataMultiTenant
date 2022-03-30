@@ -439,7 +439,7 @@ table shows the details required for executing an HTTP POST request
 against the **Profiles** endpoint to create a new service principal
 profile.
 
-<img src="./Docs/Images/media/image5.png" width=500 />
+<img src="./Docs/Images/media/image5.png" width=600 />
 
 Note that you must pass a **displayName** property in the request body
 to provide a display name for the new tenant. The **displayName** must
