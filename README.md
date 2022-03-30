@@ -1181,19 +1181,19 @@ identity of the new service principal profile.
 While this work is going on, the application's user is shown an animated
 image.
 
-<img src="./Docs/Images/media/image82.png"  width=500  />
+<img src="./Docs/Images/media/image82.png"  width=400  />
 
 After a few seconds, you should see the new customer tenant has been
 created.
 
-<img src="./Docs/Images/media/image83.png"  width=600  />
+<img src="./Docs/Images/media/image83.png"  width=700  />
 
 Click the **Onboard New Tenant** button again to create a second tenant.
 This time, set **Tenant Name** to **Contoso** and select
 **ContosoSales** from the dropdown list for **Database Name**. After
 that, click **Create New Tenant**.
 
-<img src="./Docs/Images/media/image84.png"  width=600  />
+<img src="./Docs/Images/media/image84.png"  width=700  />
 
 You should now have two customer tenants. Note that each tenant has been
 created using a different profile.
