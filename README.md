@@ -1327,14 +1327,14 @@ your user account and a service principal profile.
 Close the **Access** pane and then drill into the **Setting** page for
 the dataset named **Sales**.
 
-<img src="./Docs/Images/media/image104.png"  width=600  />
+<img src="./Docs/Images/media/image104.png"  width=700  />
 
 You should be able to verify that the **Sales** dataset has been
 configured by a service principal profile which is evidenced by the
 **Service Principal Profile Object ID** as shown in the following
 screenshot.
 
-<img src="./Docs/Images/media/image105.png"  width=600  />
+<img src="./Docs/Images/media/image105.png"  width=900  />
 
 ### Create Multiple Workspaces with a Single Service Principal Profile
 
