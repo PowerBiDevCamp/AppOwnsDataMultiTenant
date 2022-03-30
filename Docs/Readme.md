@@ -118,7 +118,7 @@ refresh operations. The following diagram depicts how Power BI artifacts
 such as reports and datasets can be added into workspaces to create
 customer tenants.
 
-<img src="./Images/media/image1.png" style="width:50%" />
+<img src="./Images/media/image1.png" />
 
 When developing an application that implements App-Owns-Data embedding,
 it’s possible to call the Power BI REST API under the identity of a
