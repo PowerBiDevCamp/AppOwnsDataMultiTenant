@@ -663,12 +663,12 @@ Power BI Service admin portal at <https://app.powerbi.com/admin-portal>.
 In the Power BI Admin portal, click the **Tenant settings** link on the
 left.
 
-<img src="./Docs/Images/media/image26.png" width=500 >
+<img src="./Docs/Images/media/image26.png" width=400 >
 
 Move down in the **Developer settings** section and expand the **Allow
 service principals to use Power BI APIs** section.
 
-<img src="./Docs/Images/media/image27.png" width=600 >
+<img src="./Docs/Images/media/image27.png" width=400 >
 
 Note that the **Allow service principals to use Power BI APIs** setting
 is initially set to **Disabled**.
