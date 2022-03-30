@@ -983,7 +983,7 @@ Update the **AdminUser** setting with your Azure AD account name so that
 you will be able to see all the Power BI workspaces created by this
 application.
 
-<img src="./Docs/Images/media/image63.png"  width=600   />
+<img src="./Docs/Images/media/image63.png"  width=480   />
 
 In the **DemoSettings** section there is a property
 named **ServicePrincipalObjectId**. The reason this property exists has
@@ -992,7 +992,7 @@ as a workspace member. Update the **ServicePrincipalObjectId** setting
 with the value you Service Principal Object Id value you collected
 earlier.
 
-<img src="./Docs/Images/media/image64.png"  width=600   />
+<img src="./Docs/Images/media/image64.png"  width=480   />
 
 In the **DemoSettings** section there is a property
 named **CapacityId**. The reason this property exists has to do with
