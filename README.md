@@ -1109,7 +1109,7 @@ Update-Database
 The **Update-Database** command should run and generate the database
 named **AppOwnsDataMultiTenantDB**.
 
-<img src="./Docs/Images/media/image73.png" width=700  />
+<img src="./Docs/Images/media/image73.png" width=600  />
 
 In Visual Studio, you can use the **SQL Server Object Explorer** to see
 the database that has just been created. Open the **SQL Server Object
@@ -1126,7 +1126,7 @@ you an see the new database named **AppOwnsDataMultiTenantDB**.
 If you expand the **Tables** node for **AppOwnsDataMultiTenantDB**, you
 should see the two tables named **Profiles** and **Tenants**.
 
-<img src="./Docs/Images/media/image76.png"  width=500  />
+<img src="./Docs/Images/media/image76.png"  width=400  />
 
 The **AppOwnsDataMultiTenantDB** database has now been set up and you
 are ready to run the application in the Visual Studio debugger.
