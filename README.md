@@ -424,7 +424,7 @@ The Power BI embedding team has introduced a new **Profiles** API which
 is used to create and manage service principal profiles. You can find
 the documentation for the **Profiles** API at the following URL.
 
-**https://docs.microsoft.com/en-us/rest/api/power-bi/profiles**
+> **https://docs.microsoft.com/en-us/rest/api/power-bi/profiles**
 
 The **Profiles** API contains the following operations.
 
