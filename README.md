@@ -705,14 +705,14 @@ minutes to apply these changes to the organization. Now scroll upwards
 in the **Tenant setting** section of the Power BI admin portal and
 locate **Workspace settings**.
 
-<img src="./Docs/Images/media/image33.png"  width=500  />
+<img src="./Docs/Images/media/image33.png"  width=560  />
 
 Note that a Power BI tenant has an older policy by default where users
 require permissions to create Office 365 groups in order to create new
 Power BI workspaces. You must reconfigure this setting so that service
 principal profiles will be able to create new workspaces.
 
-<img src="./Docs/Images/media/image34.png"  width=600  />
+<img src="./Docs/Images/media/image34.png"  width=500  />
 
 In **Workspace settings**, set **Apply to : The entire
 organization** and click the **Apply** button to save your changes.
