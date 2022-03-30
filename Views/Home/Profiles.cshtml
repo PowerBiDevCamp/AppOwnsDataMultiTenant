@@ -1,4 +1,4 @@
-@model IList<AppOwnsDataMultiTenant.Models.ServicePrincipalProfile>
+@model IList<AppOwnsDataMultiTenant.Models.AppProfile>
 
 <h2>Service Principal Profiles</h2>
 
@@ -23,12 +23,12 @@
   </thead>
   @foreach (var profile in @Model) {
     <tr>
-      <td>@profile.Name</td>
+      <td>@profile.ProfileName</td>
       <td>@profile.ProfileId</td>
-      <td>@profile.Created</td>
-      <td>@profile.Exclusive</td>
-      <td>@profile.Tenants.Count()</td>
-      <td style="text-align:center"><a href="Profile/?ProfileName=@profile.Name" class="nav nav-link"><i class="fa fa-binoculars"></i></a></td>
+      <td style="text-align:center">@profile.Created</td>
+      <td style="text-align:center">@profile.Exclusive</td>
+      <td style="text-align:center">@profile.Tenants.Count()</td>
+      <td style="text-align:center"><a href="Profile/?ProfileName=@profile.ProfileName" class="nav nav-link"><i class="fa fa-binoculars"></i></a></td>
       <td style="text-align:center"><a href="DeleteProfile/?ProfileId=@profile.ProfileId" class="nav nav-link"><i class="fa fa-remove"></i></a></td>
     </tr>
   }

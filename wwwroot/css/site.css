@@ -1,4 +1,5 @@
 ﻿
+
 nav {
   margin-bottom: 0px;
 }
@@ -131,7 +132,7 @@ h4 + .table {
   background-color: #EDBE11;
   border: 1px solid #AAA;
   margin-top: 16px;
-  padding: 12px;
+  padding: 24px;
 }
 
 .loading {

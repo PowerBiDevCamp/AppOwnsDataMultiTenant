@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using AppOwnsDataMultiTenant.Models;
+using Microsoft.PowerBI.Api.Models;
 
 namespace AppOwnsDataMultiTenant.Services {
-  
+
   public class AppOwnsDataMultiTenantDbService {
 
     private readonly AppOwnsDataMultiTenantDB dbContext;
@@ -12,24 +13,24 @@ namespace AppOwnsDataMultiTenant.Services {
       dbContext = context;
     }
 
-    public void CreateProfile(ServicePrincipalProfile Profile) {
-      Profile.Created = DateTime.Now.AddHours(0); // no hour offset - used for dev
+    public AppProfile CreateProfile(AppProfile Profile) {      
       dbContext.Profiles.Add(Profile);
       dbContext.SaveChanges();
+      return Profile;
     }
 
-    public IList<ServicePrincipalProfile> GetProfiles() {
+    public IList<AppProfile> GetProfiles() {
 
       // get app identity
       var profiles = dbContext.Profiles
                        .Select(Profile => Profile)
-                       .OrderBy(Profile => Profile.Name)
+                       .OrderBy(Profile => Profile.ProfileName)
                        .ToList();
 
       // populate Tenants collection
       foreach (var profile in profiles) {
-        profile.Tenants = 
-          dbContext.Tenants.Where(tenant => tenant.Profile.Name == profile.Name).ToList();
+        profile.Tenants =
+          dbContext.Tenants.Where(tenant => tenant.Profile.ProfileName == profile.ProfileName).ToList();
       }
 
       return profiles;
@@ -41,14 +42,14 @@ namespace AppOwnsDataMultiTenant.Services {
       var profiles = dbContext.Profiles
                        .Select(Profile => Profile)
                        .Where(Profile => Profile.Exclusive == false)
-                       .OrderBy(Profile => Profile.Name)
+                       .OrderBy(Profile => Profile.ProfileName)
                        .ToList();
 
-      return profiles.Select(Profile => Profile.Name).ToList();
+      return profiles.Select(Profile => Profile.ProfileName).ToList();
     }
 
-    public ServicePrincipalProfile GetProfile(string ProfileName) {
-        var profile = dbContext.Profiles.Where(profile => profile.Name == ProfileName).First();
+    public AppProfile GetProfile(string ProfileName) {
+      var profile = dbContext.Profiles.Where(profile => profile.ProfileName == ProfileName).First();
       profile.Tenants = dbContext.Tenants.Where(tenant => tenant.ProfileName == ProfileName).ToList();
       return profile;
     }
@@ -61,7 +62,7 @@ namespace AppOwnsDataMultiTenant.Services {
     }
 
     public string GetNextProfileName() {
-      var appNames = dbContext.Profiles.Select(servicePrincipalProfile => servicePrincipalProfile.Name).ToList();
+      var appNames = dbContext.Profiles.Select(servicePrincipalProfile => servicePrincipalProfile.ProfileName).ToList();
       string baseName = "GenericProfile";
       string nextName;
       int counter = 0;
@@ -86,7 +87,7 @@ namespace AppOwnsDataMultiTenant.Services {
       return nextName;
     }
 
-    public ServicePrincipalProfile GetNextProfileInPool() {
+    public AppProfile GetNextProfileInPool() {
       var AppOwnsDataMultiTenant = GetProfiles().Where(servicePrincipalProfile => servicePrincipalProfile.Exclusive == false);
       if (AppOwnsDataMultiTenant.Count() == 0) {
         return null;
@@ -109,7 +110,13 @@ namespace AppOwnsDataMultiTenant.Services {
 
     public CustomerTenant GetTenant(string TenantName) {
       var tenant = dbContext.Tenants.Where(tenant => tenant.Name == TenantName).First();
+      tenant.Profile = dbContext.Profiles.Where(profile => profile.ProfileName == tenant.ProfileName).First();
       return tenant;
+    }
+
+    public Boolean TenantAlreadyExists(string TenantName) {
+      var response = dbContext.Tenants.Where(tenant => tenant.Name == TenantName);
+      return (response.Count() > 0);
     }
 
     public void DeleteTenant(CustomerTenant tenant) {

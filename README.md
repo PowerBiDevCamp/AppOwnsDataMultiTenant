@@ -566,7 +566,7 @@ following code shows how to execute code as a service principal profile
 when retrieving embedding metadata and an embed token used to embed a
 report on a web page.
 
-<img src="./Docs/Images/media/image20.png"  width=800 />
+<img src="./Docs/Images/media/image20.png"  width=700 />
 
 ## Getting Started with the **AppOwnsDataMultiTenant** application
 
@@ -653,7 +653,7 @@ It might take a minute or two before the group appears. Refresh the
 **All Groups** page a few times until you can verify that you can see
 the new security group named **Power BI Apps** in the list of groups.
 
-<img src="./Docs/Images/media/image25.png" width=500 />
+<img src="./Docs/Images/media/image25.png" width=700 />
 
 ### Configure Power BI tenant-level settings for service principal profile access
 
@@ -730,7 +730,7 @@ visuals**.
 
 Enable the **Map and filled map visuals** setting and then click **Apply**.
 
-<img src="./Docs/Images/media/image37.png"  width=450  />
+<img src="./Docs/Images/media/image37.png"  width=350  />
 
 You have now completed the configuration of Power BI tenant-level
 settings. Now you can move ahead to create the Azure AD application that

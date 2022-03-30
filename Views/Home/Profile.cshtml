@@ -1,4 +1,4 @@
-@model AppOwnsDataMultiTenant.Models.ServicePrincipalProfile
+@model AppOwnsDataMultiTenant.Models.AppProfile
 
 <h2>
   <span><a class="btn btn-sm h2-backarrow" asp-action="Profiles"><i class="fa fa-backward"></i></a></span>
@@ -10,7 +10,7 @@
     <div class="form-group row">
       <label for="AppIdentityName" class="col-sm-2 col-form-label">Profile Name</label>
       <div class="col-sm-10">
-        <input class="form-control " id="ProfileName" name="ProfileName" readonly value="@Model.Name">
+        <input class="form-control " id="ProfileName" name="ProfileName" readonly value="@Model.ProfileName">
       </div>
     </div>
     <div class="form-group row">
@@ -41,9 +41,9 @@
       <td>@tenant.Name</td>
       <td>@tenant.WorkspaceId</td>
       <td>@tenant.ProfileName</td>
-      <td style="text-align:center"><a href="~/Home/Embed/?Tenant=@tenant.Name" class="nav nav-link" target="_blank"><i class="fa fa-bar-chart"></i></a></td>
+      <td style="text-align:center"><a href="~/Home/Embed/?TenantName=@tenant.Name" class="nav nav-link" target="_blank"><i class="fa fa-bar-chart"></i></a></td>
       <td style="text-align:center"><a href="@tenant.WorkspaceUrl" class="nav nav-link" target="_blank"><i class="fa fa-line-chart"></i></a></td>
-      <td style="text-align:center"><a href="~/Home/Tenant/?Name=@tenant.Name" class="nav nav-link"><i class="fa fa-search"></i></a></td>
+      <td style="text-align:center"><a href="~/Home/Tenant/?TenantName=@tenant.Name" class="nav nav-link"><i class="fa fa-search"></i></a></td>
       <td style="text-align:center"><a href="~/Home/DeleteTenant/?TenantName=@tenant.Name" class="nav nav-link"><i class="fa fa-remove"></i></a></td>
     </tr>
   }

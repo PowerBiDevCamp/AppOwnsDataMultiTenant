@@ -1,4 +1,4 @@
-@model AppOwnsDataMultiTenant.Services.CustomerTenantDetails
+@model AppOwnsDataMultiTenant.Models.CustomerTenantDetails
 
 <h2>
   <span><a class="btn btn-sm h2-backarrow" asp-action="Tenants"><i class="fa fa-backward"></i></a></span>
@@ -46,7 +46,7 @@
     <div class="form-group row">
       <label for="DatabaseUserPassword" class="col-sm-3 col-form-label">Database User Password</label>
       <div class="col-sm-9">
-        <input class="form-control" id="DatabaseUserPassword" name="DatabaseUserPassword" readonly="readonly" value="@Model.DatabaseUserPassword">
+        <input class="form-control" id="DatabaseUserPassword" name="DatabaseUserPassword" type="password" readonly="readonly" value="@Model.DatabaseUserPassword">
       </div>
     </div>
   </fieldset>
@@ -67,9 +67,9 @@
       </thead>
       @foreach (var member in Model.Members) {
         <tr>
-          <td>@(member.profile != null ? member.profile.displayName : member.displayName)</td>
-          <td>@member.groupUserAccessRight</td>
-          <td>@member.principalType</td>
+          <td>@(member.Profile != null ? member.Profile.DisplayName : member.DisplayName)</td>
+          <td>@member.GroupUserAccessRight</td>
+          <td>@(member.Profile != null ? "Profile" : member.PrincipalType)</td>
         </tr>
       }
     </table>

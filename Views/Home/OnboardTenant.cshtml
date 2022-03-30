@@ -1,4 +1,4 @@
-@model AppOwnsDataMultiTenant.Controllers.HomeController.OnboardTenantModel
+@model AppOwnsDataMultiTenant.Services.CustomerTenantManager.OnboardTenantModel
 
 <h2 id="page-title">Onboard New Tenant</h2>
 
@@ -33,7 +33,7 @@
     <div class="form-group row">
       <label for="SqlUserPassword" class="col-sm-3 col-form-label">SQL Server User Password</label>
       <div class="col-sm-9">
-        <input class="form-control" id="DatabaseUserPassword" name="DatabaseUserPassword" placeholder="Enter Azure SQL User Password" value="pass@word1" />
+        <input class="form-control" id="DatabaseUserPassword" name="DatabaseUserPassword" type="password" placeholder="Enter Azure SQL User Password" value="pass@word1" />
       </div>
     </div>
     <div class="form-group row">

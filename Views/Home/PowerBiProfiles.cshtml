@@ -1,4 +1,4 @@
-@model IList<AppOwnsDataMultiTenant.Services.PowerBiServiceApi.Profile>
+@model IList<Microsoft.PowerBI.Api.Models.ServicePrincipalProfile>
 
 <h2>Service Principal Profiles in Power BI</h2>
 
@@ -11,8 +11,8 @@
   </thead>
   @foreach (var profile in @Model) {
     <tr>
-      <td>@profile.displayName</td>
-      <td>@profile.id</td>
+      <td>@profile.DisplayName</td>
+      <td>@profile.Id</td>
     </tr>
   }
 </table>

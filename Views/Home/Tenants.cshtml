@@ -26,9 +26,9 @@
       <td>@tenant.Name</td>
       <td>@tenant.WorkspaceId</td>
       <td>@tenant.ProfileName</td>
-      <td style="text-align:center"><a href="~/Home/Embed/?Profile=@tenant.ProfileName&Tenant=@tenant.Name" class="nav nav-link" target="_blank"><i class="fa fa-bar-chart"></i></a></td>
+      <td style="text-align:center"><a href="~/Home/Embed/?TenantName=@tenant.Name" class="nav nav-link" target="_blank"><i class="fa fa-bar-chart"></i></a></td>
       <td style="text-align:center"><a href="@tenant.WorkspaceUrl" class="nav nav-link" target="_blank"><i class="fa fa-line-chart"></i></a></td>
-      <td style="text-align:center"><a href="Tenant/?Name=@tenant.Name" class="nav nav-link"><i class="fa fa-binoculars"></i></a></td>
+      <td style="text-align:center"><a href="Tenant/?TenantName=@tenant.Name" class="nav nav-link"><i class="fa fa-binoculars"></i></a></td>
       <td style="text-align:center"><a href="DeleteTenant/?TenantName=@tenant.Name" class="nav nav-link"><i class="fa fa-remove"></i></a></td>
     </tr>
   }
