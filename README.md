@@ -481,7 +481,7 @@ principal profile.
 If you are programming with the Power BI .NET SDK, you can call
 **Profile.GetProfiles** using the following code.
 
-<img src="./Docs/Images/media/image10.png" width=720 />
+<img src="./Docs/Images/media/image10.png" width=680 />
 
 Let's say you've just created a new service principal profile and you'd
 like to add it as a member of a workspace to give it access. You can
@@ -490,13 +490,13 @@ following JSON with an **identifier** property with the service
 principal object ID and an inner **profile** object with an **id**
 property that contains the profile Id.
 
-<img src="./Docs/Images/media/image11.png" width=600 />
+<img src="./Docs/Images/media/image11.png" width=650 />
 
 If you are programming with the Power BI .NET SDK, you can use the
 following code to add a service principal profile as a workspace member
 in the role of Admin.
 
-<img src="./Docs/Images/media/image12.png" width=780 />
+<img src="./Docs/Images/media/image12.png" width=800 />
 
 If you inspect the **Access** pane for a Power BI workspace in the Power
 BI Service, you can determine which accounts have been added as members.
@@ -504,7 +504,7 @@ The following screenshot shows the Access pane for a workspace whose
 membership includes a user and a service principal profile with a
 display name of Contoso.
 
-<img src="./Docs/Images/media/image13.png" width=400 />
+<img src="./Docs/Images/media/image13.png" width=300 />
 
 ### Executing API Calls under the Identity of a Service Principal Profile
 
