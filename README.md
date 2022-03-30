@@ -1138,31 +1138,31 @@ debugger by pressing the **{F5}** key or clicking the Visual
 Studio **Play** button with the green arrow and the
 caption **AppOwnsDataMultiTenant**.
 
-<img src="./Docs/Images/media/image77.png" style="width:7.36389in;height:1.5625in" />
+<img src="./Docs/Images/media/image77.png"  width=800  />
 
 When the application starts, you should see its welcome page as shown in
 the following screenshot.
 
-<img src="./Docs/Images/media/image78.png" style="width:5.60347in;height:1.41667in" />
+<img src="./Docs/Images/media/image78.png"  width=600  />
 
 ### Create Customer Tenants
 
 Now it's time to create your first customer tenant. Start by navigating
 to the **Tenants** page.
 
-<img src="./Docs/Images/media/image79.png" style="width:4.16597in;height:0.76042in" />
+<img src="./Docs/Images/media/image79.png"  width=600 />
 
 Click the **Onboard New Tenant** button to display the **Onboard New
 Tenant** page.
 
-<img src="./Docs/Images/media/image80.png" style="width:4.25972in;height:1.09375in" />
+<img src="./Docs/Images/media/image80.png"  width=600  />
 
 On the **Onboard New Tenant** page, enter a **Tenant Name** of
 **Wingtip**. Leave all the other input elements with their default
 values. Click to **Create New Tenant** button to begin the process of
 creating a new customer tenant.
 
-<img src="./Docs/Images/media/image81.png" style="width:4.49916in;height:2.44654in" />
+<img src="./Docs/Images/media/image81.png"  width=600  />
 
 What happens when you click the **Create New Tenant** button? The
 **AppOwnsDataMultiTenant** application uses the Power BI REST API to
@@ -1171,88 +1171,81 @@ After the service principal profile is created, the application then
 switches contexts and executes the following API calls under the
 identity of the new service principal profile.
 
--   Create a new Power BI workspace
-
--   Upload a [template PBIX
-    file](https://github.com/PowerBiDevCamp/AppOwnsDataMultiTenant/raw/main/wwwroot/PBIX/DatasetTemplate.pbix) to
-    create the **Sales** dataset and the **Sales** report
-
--   Update dataset parameters on **Sales** dataset to point to this
-    customer's database
-
--   Patch credentials for the SQL datasource used by
-    the **Sales** dataset
-
--   Start a refresh operation on the **Sales** database
+* Create a new Power BI workspace
+* Upload a [template PBIX file](https://github.com/PowerBiDevCamp/AppOwnsDataMultiTenant/raw/main/wwwroot/PBIX/DatasetTemplate.pbix) to create 
+  the **Sales** dataset and the **Sales** report
+* Update dataset parameters on **Sales** dataset to point to this customer's database
+* Patch credentials for the SQL datasource used by the **Sales** dataset
+* Start a refresh operation on the **Sales** database
 
 While this work is going on, the application's user is shown an animated
 image.
 
-<img src="./Docs/Images/media/image82.png" style="width:2.36131in;height:1.6478in" />
+<img src="./Docs/Images/media/image82.png"  width=500  />
 
 After a few seconds, you should see the new customer tenant has been
 created.
 
-<img src="./Docs/Images/media/image83.png" style="width:5.20764in;height:1.21875in" />
+<img src="./Docs/Images/media/image83.png"  width=600  />
 
 Click the **Onboard New Tenant** button again to create a second tenant.
 This time, set **Tenant Name** to **Contoso** and select
 **ContosoSales** from the dropdown list for **Database Name**. After
 that, click **Create New Tenant**.
 
-<img src="./Docs/Images/media/image84.png" style="width:4.03175in;height:1.98684in" />
+<img src="./Docs/Images/media/image84.png"  width=600  />
 
 You should now have two customer tenants. Note that each tenant has been
 created using a different profile.
 
-<img src="./Docs/Images/media/image85.png" style="width:5.24931in;height:1.29167in" />
+<img src="./Docs/Images/media/image85.png"  width=600  />
 
 Click the **Profiles** link to examine each of the profiles that have
 been created.
 
-<img src="./Docs/Images/media/image86.png" style="width:5.03056in;height:1.55208in" />
+<img src="./Docs/Images/media/image86.png"  width=600  />
 
 Let's examine what has been stored in the **Profiles** table in
 **AppOwnsDataMultiTenantDB** database. Note that **ProfileName** column
 serves as the primary key of the **Profiles** table
 
-<img src="./Docs/Images/media/image87.png" style="width:3.25972in;height:0.52083in" />
+<img src="./Docs/Images/media/image87.png"  width=600  />
 
 The application also added new records to the **Tenants** table. Note
 that the **ProfileName** column in the **Tenants** table serves as a
 foreign key so that each record in **Tenants** is associated with
 exactly one record in **Profiles**.
 
-<img src="./Docs/Images/media/image88.png" style="width:7.49931in;height:0.5in" />
+<img src="./Docs/Images/media/image88.png"  width=600  />
 
 Now click the **Power BI Profiles** link. When you navigate to this
 page, the application calls the **Get Profiles** operation of the Power
 BI REST API to retrieve all the profiles that have been created by the
 application's service principal.
 
-![](./Images/media/image89.png)
+<img src="./Docs/Images/media/image89.png"  width=600  />
 
 If you use a developer tool such as Fiddler, you can inspect the call to
 **Get Profiles** to see the JSON response.
 
-<img src="./Docs/Images/media/image90.png" style="width:5.21806in;height:1.92708in" />
+<img src="./Docs/Images/media/image90.png"  width=600  />
 
 ### Access Customer Tenants
 
 Now that you have created two tenants, it's time to access their
 content. Navigate back to the **Tenants** page.
 
-<img src="./Docs/Images/media/image79.png" style="width:4.16597in;height:0.76042in" />
+<img src="./Docs/Images/media/image79.png"  width=600  />
 
 Click on the **View** button for a specific tenant on the 
 **Tenants** page to drill into the **Tenant Details** page.
 
-<img src="./Docs/Images/media/image91.png" style="width:7.00972in;height:1.09375in" />
+<img src="./Docs/Images/media/image91.png"  width=600  />
 
 The **Tenant Details** page displays Power BI workspace details
 including its members, datasets and reports.
 
-<img src="./Docs/Images/media/image92.png" style="width:4.85347in;height:2.65625in" />
+<img src="./Docs/Images/media/image92.png"  width=600  />
 
 If you use a developer tool such as Fiddler, you can inspect the API
 call to retrieve workspace members as well as the API calls to retrieve
@@ -1261,10 +1254,12 @@ each of these calls is made under the identity of a service principal
 profile as evidenced by the existence of the **X-PowerBI-profile-id**
 header.
 
-<img src="./Docs/Images/media/image93.png" style="width:5.75972in;height:1.36458in" />
+<img src="./Docs/Images/media/image93.png"  width=600  />
 
 Click on the back arrow to return to the
-**Tenants** page.<img src="./Docs/Images/media/image94.png" style="width:4.14465in;height:1.16107in" />
+**Tenants** page.
+
+<img src="./Docs/Images/media/image94.png"  width=600  />
 
 ### Embed Reports
 
@@ -1273,22 +1268,22 @@ the **AppOwnsDataMultiTenant** application's ability to embed reports.
 On the **Tenants** page, click the **Embed** button for the **Contoso**
 tenant to navigate to the **Embed** page.
 
-<img src="./Docs/Images/media/image95.png" style="width:5.00629in;height:1.24041in" />
+<img src="./Docs/Images/media/image95.png"  width=600  />
 
 You should now see a page with an embedded report for the Contoso
 tenant.
 
-<img src="./Docs/Images/media/image96.png" style="width:3.51643in;height:2.0566in" />
+<img src="./Docs/Images/media/image96.png"  width=600  />
 
 Click on the back arrow button to return to the **Tenants** page and
 click the **Embed** button for the Wingtip tenant.
 
-<img src="./Docs/Images/media/image97.png" style="width:5.8805in;height:1.46218in" />
+<img src="./Docs/Images/media/image97.png"  width=600  />
 
 You should now see that the application is able to embed a report from
 any customer tenant.
 
-<img src="./Docs/Images/media/image98.png" style="width:4.55556in;height:2.64343in" />
+<img src="./Docs/Images/media/image98.png"  width=600  />
 
 When a user navigates to the **Embed** page for a customer tenant, the
 application must determine which service principal profile was used to
@@ -1303,7 +1298,7 @@ If you use a developer tool such as Fiddler, you can see that calls to
 access a workspace and to generate embed tokens includes the
 **PowerBI-profile-id** header as shown in the following screenshot.
 
-<img src="./Docs/Images/media/image99.png" style="width:7.1063in;height:2.57143in" alt="Graphical user interface, text, application Description automatically generated" />
+<img src="./Docs/Images/media/image99.png"  width=600  />
 
 ### Inspect the Power BI Workspaces
 
@@ -1313,34 +1308,34 @@ at [https://app.powerbi.com](https://app.powerbi.com/). You should be
 able to see and navigate to any of the Power BI workspaces that have
 been created by the **AppOwnsDataMultiTenant** application.
 
-<img src="./Docs/Images/media/image100.png" style="width:1.88542in;height:1.92708in" />
+<img src="./Docs/Images/media/image100.png"  width=600  />
 
 Navigate to one of these workspaces such as the workspace
 named **Contoso**.
 
-<img src="./Docs/Images/media/image101.png" style="width:4.1746in;height:1.44306in" />
+<img src="./Docs/Images/media/image101.png"  width=600  />
 
 Click the **Access** button to display the **Access** pane for the
 Contoso workspace.
 
-<img src="./Docs/Images/media/image102.png" style="width:3.8254in;height:1.18706in" />
+<img src="./Docs/Images/media/image102.png"  width=600  />
 
 On the workspace **Access** pane, you should see two members including
 your user account and a service principal profile.
 
-<img src="./Docs/Images/media/image103.png" style="width:2.12698in;height:2.28325in" />
+<img src="./Docs/Images/media/image103.png"  width=600  />
 
 Close the **Access** pane and then drill into the **Setting** page for
 the dataset named **Sales**.
 
-<img src="./Docs/Images/media/image104.png" style="width:3.04762in;height:1.60647in" />
+<img src="./Docs/Images/media/image104.png"  width=600  />
 
 You should be able to verify that the **Sales** dataset has been
 configured by a service principal profile which is evidenced by the
 **Service Principal Profile Object ID** as shown in the following
 screenshot.
 
-<img src="./Docs/Images/media/image105.png" style="width:5.53968in;height:1.25515in" alt="Graphical user interface, application Description automatically generated" />
+<img src="./Docs/Images/media/image105.png"  width=600  />
 
 ### Create Multiple Workspaces with a Single Service Principal Profile
 
@@ -1363,12 +1358,12 @@ then click the **Add new profile** button. On the **Create New Profile**
 page, enter a **Profile Name** of **Acme Profile** and click **Add New
 Profile to Pool** button.
 
-<img src="./Docs/Images/media/image106.png" style="width:4.20126in;height:0.98338in" />
+<img src="./Docs/Images/media/image106.png"  width=600  />
 
 You should see a new profile named **Acme Profile** has been created
 with **Exclusive** equals **False** and **Tenants** equals **0**.
 
-<img src="./Docs/Images/media/image107.png" style="width:5.01185in;height:1.01887in" />
+<img src="./Docs/Images/media/image107.png"  width=600  />
 
 The **Exclusive** value is set to **False** because the profile can be
 used to create multiple tenants. The **Tenants** value equals **0**
@@ -1377,23 +1372,18 @@ time to create two tenants for this profile. Click the **Tenants** link
 to navigate to the **Tenants** page and then click the **Onboard New
 Tenant** button.
 
-<img src="./Docs/Images/media/image108.png" style="width:3.33333in;height:0.70904in" />
+<img src="./Docs/Images/media/image108.png"  width=600  />
 
 On the **Onboard New Tenant** page…
-
-1.  Enter a **Tenant Name** of **Acme Corp USA**.
-
-2.  Select a **Database Name** of **AcmeCorpSales**.
-
-3.  In the **Profile** section, select the option to **Create Tenant
-    using Service Principal Profile from Pool**
-
-4.  Select the pre-existing profile named **Acme Profile**.
+* Enter a **Tenant Name** of **Acme Corp USA**.
+* Select a **Database Name** of **AcmeCorpSales**.
+* In the **Profile** section, select the option to **Create Tenant using Service Principal Profile from Pool**.
+* Select the pre-existing profile named **Acme Profile**.
 
 When your page matches the following screenshot, click the **Create New
 Tenant**.
 
-<img src="./Docs/Images/media/image109.png" style="width:4.03774in;height:2.10586in" />
+<img src="./Docs/Images/media/image109.png"  width=600  />
 
 Now you will create a second tenant which uses the profile named **Acme
 Profile**. On the **Tenants** page, click the **Onboard New Tenant**
@@ -1412,18 +1402,18 @@ On the **Onboard New Tenant** page…
 
 5.  Click **Create New Tenant**.
 
-<img src="./Docs/Images/media/image110.png" style="width:3.69182in;height:1.92871in" />
+<img src="./Docs/Images/media/image110.png"  width=600  />
 
 You should see that you have now created two separate customer tenants
 that are both associated with **Acme Profile**.
 
-<img src="./Docs/Images/media/image111.png" style="width:4.48428in;height:1.14257in" />
+<img src="./Docs/Images/media/image111.png"  width=600 />
 
 Click the **Profile** link to navigate to the **Profiles** page. If you
 inspect the profile named **Acme Profile**, you can see it now has a
 tenant count of **2**.
 
-<img src="./Docs/Images/media/image112.png" style="width:4.2327in;height:1.41106in" />
+<img src="./Docs/Images/media/image112.png"  width=600  />
 
 Note that each profile has a value for the **Exclusive** property. This
 property serves two purposes. First, it's used to determine which
@@ -1431,7 +1421,7 @@ profiles are added to the dropdown list of pooled profiles on the
 **Onboard New Tenant** page. This dropdown list will only contain
 profiles with an **Exclusive** property value of **False**.
 
-![](./Images/media/image113.png)
+<img src="./Docs/Images/media/image113.png"  width=600  />
 
 The second purpose of the **Exclusive** property is to determine whether
 to automatically delete a service principal profile from the Power BI
