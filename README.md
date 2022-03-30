@@ -1032,7 +1032,7 @@ that you shouldn't make any changes to **AppOwnsDataMultiTenantDB.cs**.
 You are just going to inspect the file to understand how
 the **AppOwnsDataMultiTenantDB** database is structured.
 
-<img src="./Docs/Images/media/image65.png" style="width:4.72847in;height:2.05208in" />
+<img src="./Docs/Images/media/image65.png" width=700 />
 
 When you inspect the code inside **AppOwnsDataMultiTenantDB.cs**, you
 will see a class named **AppOwnsDataMultiTenantDB** that derives
@@ -1042,13 +1042,13 @@ The **AppOwnsDataMultiTenantDB** class serves as the top-level class for
 the Entity Framework which contains two **DBSet** properties
 named **Profiles** and **Tenants**.
 
-<img src="./Docs/Images/media/image66.png" style="width:5.14514in;height:1.42708in" />
+<img src="./Docs/Images/media/image66.png"  width=700  />
 
 When you generate the database, each of these **DBSet** properties will
 be created as database tables. The **Profiles** table is generated using
 the table schema defined by the **AppProfile** class.
 
-<img src="./Docs/Images/media/image67.png" style="width:3.83264in;height:1.04167in" />
+<img src="./Docs/Images/media/image67.png"  width=700  />
 
 As you saw earlier, Power BI tracks an **id** and **displayName**
 property for each profile. The **AppProfile** class defines
