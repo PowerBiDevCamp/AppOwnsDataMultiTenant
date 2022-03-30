@@ -1362,7 +1362,7 @@ Profile to Pool** button.
 You should see a new profile named **Acme Profile** has been created
 with **Exclusive** equals **False** and **Tenants** equals **0**.
 
-<img src="./Docs/Images/media/image107.png"  width=700  />
+<img src="./Docs/Images/media/image107.png"  width=800  />
 
 The **Exclusive** value is set to **False** because the profile can be
 used to create multiple tenants. The **Tenants** value equals **0**
