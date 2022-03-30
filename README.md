@@ -1270,15 +1270,14 @@ tenant to navigate to the **Embed** page.
 
 <img src="./Docs/Images/media/image95.png"  width=700  />
 
-You should now see a page with an embedded report for the Contoso
-tenant.
+You should now see a page with an embedded report for the Contoso tenant.
 
-<img src="./Docs/Images/media/image96.png"  width=700  />
+<img src="./Docs/Images/media/image96.png"  width=600  />
 
 Click on the back arrow button to return to the **Tenants** page and
 click the **Embed** button for the Wingtip tenant.
 
-<img src="./Docs/Images/media/image97.png"  width=600  />
+<img src="./Docs/Images/media/image97.png"  width=300  />
 
 You should now see that the application is able to embed a report from
 any customer tenant.
