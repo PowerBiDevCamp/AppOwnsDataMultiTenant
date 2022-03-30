@@ -1322,7 +1322,7 @@ Contoso workspace.
 On the workspace **Access** pane, you should see two members including
 your user account and a service principal profile.
 
-<img src="./Docs/Images/media/image103.png"  width=600  />
+<img src="./Docs/Images/media/image103.png"  width=350  />
 
 Close the **Access** pane and then drill into the **Setting** page for
 the dataset named **Sales**.
