@@ -20,14 +20,9 @@ Published March 31, 2022
 
 # Table of Contents
 
-[Developing Multitenant Applications with Power BI Embedding
-[2](#developing-multitenant-applications-with-power-bi-embedding)](#developing-multitenant-applications-with-power-bi-embedding)
-
-[Understanding the 1000 Workspace Limitation
-[2](#understanding-the-1000-workspace-limitation)](#understanding-the-1000-workspace-limitation)
-
-[Managing Isolation for Datasets and Datasource Credentials
-[3](#managing-isolation-for-datasets-and-datasource-credentials)](#managing-isolation-for-datasets-and-datasource-credentials)
+* [Developing Multitenant Applications with Power BI Embedding](#developing-multitenant-applications-with-power-bi-embedding)
+* [Understanding the 1000 Workspace Limitation](#understanding-the-1000-workspace-limitation)
+* [Managing Isolation for Datasets and Datasource Credentials](#managing-isolation-for-datasets-and-datasource-credentials)
 
 [Design Strategies Before Service Principal Profiles
 [4](#design-strategies-before-service-principal-profiles)](#design-strategies-before-service-principal-profiles)
