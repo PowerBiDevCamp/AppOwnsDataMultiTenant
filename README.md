@@ -948,7 +948,7 @@ the **appsettings.json** file. Open the **appsettings.json** file and
 examine the JSON content inside. There are three important sections
 named **AzureAd**, **AppOwnsDataMultiTenantDB** and **DemoSettings**.
 
-<img src="./Docs/Images/media/image60.png"  width=600   />
+<img src="./Docs/Images/media/image60.png"  width=700   />
 
 Inside the **AzureAd** section, update
 the **TenantId**, **ClientId** and **ClientSecret** with the data you
