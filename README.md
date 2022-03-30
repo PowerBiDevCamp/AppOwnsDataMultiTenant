@@ -1415,7 +1415,7 @@ profiles are added to the dropdown list of pooled profiles on the
 **Onboard New Tenant** page. This dropdown list will only contain
 profiles with an **Exclusive** property value of **False**.
 
-<img src="./Docs/Images/media/image113.png"  width=600  />
+<img src="./Docs/Images/media/image113.png"  width=400  />
 
 The second purpose of the **Exclusive** property is to determine whether
 to automatically delete a service principal profile from the Power BI
