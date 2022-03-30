@@ -426,24 +426,20 @@ the documentation for the **Profiles** API at the following URL.
 
 **https://docs.microsoft.com/en-us/rest/api/power-bi/profiles**
 
-The Profiles API contains the following operations.
+The **Profiles** API contains the following operations.
 
--   Create Profile
-
--   Delete Profile
-
--   Get Profile
-
--   Get Profiles
-
--   Update Profile
+* Create Profile
+* Delete Profile
+* Get Profile
+* Get Profiles
+* Update Profile
 
 Let's begin by looking at the Create Profile operation. The following
 table shows the details required for executing an HTTP POST request
 against the **Profiles** endpoint to create a new service principal
 profile.
 
-<img src="./Docs/Images/media/image5.png" style="width:4.1542in;height:1.77778in" />
+<img src="./Docs/Images/media/image5.png" width=500 />
 
 Note that you must pass a **displayName** property in the request body
 to provide a display name for the new tenant. The **displayName** must
