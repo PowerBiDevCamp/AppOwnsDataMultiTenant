@@ -1209,14 +1209,14 @@ Let's examine what has been stored in the **Profiles** table in
 **AppOwnsDataMultiTenantDB** database. Note that **ProfileName** column
 serves as the primary key of the **Profiles** table
 
-<img src="./Docs/Images/media/image87.png"  width=600  />
+<img src="./Docs/Images/media/image87.png"  width=550  />
 
 The application also added new records to the **Tenants** table. Note
 that the **ProfileName** column in the **Tenants** table serves as a
 foreign key so that each record in **Tenants** is associated with
 exactly one record in **Profiles**.
 
-<img src="./Docs/Images/media/image88.png"  width=600  />
+<img src="./Docs/Images/media/image88.png"  width=900  />
 
 Now click the **Power BI Profiles** link. When you navigate to this
 page, the application calls the **Get Profiles** operation of the Power
