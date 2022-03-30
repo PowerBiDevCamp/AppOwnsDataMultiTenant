@@ -750,7 +750,7 @@ as **Power BI Embedding Tenant Manager** and accept the default
 selection for **Supported account types** of **Accounts in this
 organizational directory only**.
 
-<img src="./Docs/Images/media/image39.png" width=500  />
+<img src="./Docs/Images/media/image39.png" width=580  />
 
 Complete the following steps in the **Redirect URI** section.
 * Set the dropdown selection to **Web** in the dropdown box
@@ -766,7 +766,7 @@ called the ***Client ID***, so don't let this confuse you. You will need
 to copy this Application ID and store it so you can use it later to
 configure the project's support for Client Credentials Flow.
 
-<img src="./Docs/Images/media/image41.png"  width=600  />
+<img src="./Docs/Images/media/image41.png"  width=800  />
 
 Copy the **Tenant ID** (aka Directory ID) and paste it into a text
 document so you can use it later in the setup process. Note that
