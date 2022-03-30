@@ -663,61 +663,61 @@ Power BI Service admin portal at <https://app.powerbi.com/admin-portal>.
 In the Power BI Admin portal, click the **Tenant settings** link on the
 left.
 
-<img src="./Docs/Images/media/image26.png" style="width:2.60041in;height:1.69841in" alt="Graphical user interface, application Description automatically generated" />
+<img src="./Docs/Images/media/image26.png" width=500 >
 
 Move down in the **Developer settings** section and expand the **Allow
 service principals to use Power BI APIs** section.
 
-<img src="./Docs/Images/media/image27.png" style="width:3.55419in;height:2.19048in" alt="Graphical user interface, application Description automatically generated" />
+<img src="./Docs/Images/media/image27.png" width=600 >
 
 Note that the **Allow service principals to use Power BI APIs** setting
 is initially set to **Disabled**.
 
-<img src="./Docs/Images/media/image28.png" style="width:4.69557in;height:2.28571in" alt="Graphical user interface, text, application, email Description automatically generated" />
+<img src="./Docs/Images/media/image28.png"  width=600  />
 
 Change the setting to **Enabled**. After that, set the **Apply
 to** setting to **Specific security groups** and add the **Power BI
 Apps** security group as shown in the screenshot below. Click
 the **Apply** button to save your configuration changes.
 
-<img src="./Docs/Images/media/image29.png" style="width:4.33873in;height:2.85714in" alt="Graphical user interface, text, application Description automatically generated" />
+<img src="./Docs/Images/media/image29.png"  width=600  />
 
 You will see a notification indicating it might take up to 15 minutes to
 apply these changes to the organization.
 
-<img src="./Docs/Images/media/image30.png" style="width:3.17083in;height:0.57143in" alt="Text Description automatically generated with medium confidence" />
+<img src="./Docs/Images/media/image30.png"  width=600  />
 
 Now look down in the **Developer setting** section of the Power BI admin
 portal and locate and expand the section titled **Allow service
 principals to create and use profiles**.
 
-<img src="./Docs/Images/media/image31.png" style="width:3.22222in;height:1.69784in" />
+<img src="./Docs/Images/media/image31.png"  width=600  />
 
 Change the setting to **Enabled**. After that, set the **Apply
 to** setting to **Specific security groups** and add the **Power BI
 Apps** security group as shown in the screenshot below. Click
 the **Apply** button to save your configuration changes.
 
-<img src="./Docs/Images/media/image32.png" style="width:3.5873in;height:2.23783in" />
+<img src="./Docs/Images/media/image32.png"  width=600  />
 
 You will see another notification indicating it might take up to 15
 minutes to apply these changes to the organization. Now scroll upwards
 in the **Tenant setting** section of the Power BI admin portal and
 locate **Workspace settings**.
 
-<img src="./Docs/Images/media/image33.png" style="width:3.53968in;height:1.77181in" alt="Graphical user interface, application, Teams Description automatically generated" />
+<img src="./Docs/Images/media/image33.png"  width=600  />
 
 Note that a Power BI tenant has an older policy by default where users
 require permissions to create Office 365 groups in order to create new
 Power BI workspaces. You must reconfigure this setting so that service
 principal profiles will be able to create new workspaces.
 
-<img src="./Docs/Images/media/image34.png" style="width:3.24748in;height:1.63492in" alt="Graphical user interface, text, application, email Description automatically generated" />
+<img src="./Docs/Images/media/image34.png"  width=600  />
 
 In **Workspace settings**, set **Apply to : The entire
 organization** and click the **Apply** button to save your changes.
 
-<img src="./Docs/Images/media/image35.png" style="width:3.45347in;height:2.04028in" />
+<img src="./Docs/Images/media/image35.png"  width=600  />
 
 There is one more tenant-level setting that must be enabled for the
 **AppOwnsDataMultiTenant** application to work correctly. That is the
@@ -726,12 +726,11 @@ the **Integration settings** section in **Tenant settings**. Inside the
 that section locate and expand the setting named **Map and filled map
 visuals**.
 
-<img src="./Docs/Images/media/image36.png" style="width:4.05139in;height:1.90625in" />
+<img src="./Docs/Images/media/image36.png"  width=600 />
 
-Enable the **Map and filled map visuals** setting and then click
-**Apply**.
+Enable the **Map and filled map visuals** setting and then click **Apply**.
 
-<img src="./Docs/Images/media/image37.png" style="width:2.58333in;height:1.75in" />
+<img src="./Docs/Images/media/image37.png"  width=600  />
 
 You have now completed the configuration of Power BI tenant-level
 settings. Now you can move ahead to create the Azure AD application that
