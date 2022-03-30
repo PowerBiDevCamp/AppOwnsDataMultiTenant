@@ -1268,7 +1268,7 @@ the **AppOwnsDataMultiTenant** application's ability to embed reports.
 On the **Tenants** page, click the **Embed** button for the **Contoso**
 tenant to navigate to the **Embed** page.
 
-<img src="./Docs/Images/media/image95.png"  width=700  />
+<img src="./Docs/Images/media/image95.png"  width=650  />
 
 You should now see a page with an embedded report for the Contoso tenant.
 
@@ -1277,7 +1277,7 @@ You should now see a page with an embedded report for the Contoso tenant.
 Click on the back arrow button to return to the **Tenants** page and
 click the **Embed** button for the Wingtip tenant.
 
-<img src="./Docs/Images/media/image97.png"  width=300  />
+<img src="./Docs/Images/media/image97.png"  width=650  />
 
 You should now see that the application is able to embed a report from
 any customer tenant.
