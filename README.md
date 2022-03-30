@@ -1327,7 +1327,7 @@ your user account and a service principal profile.
 Close the **Access** pane and then drill into the **Setting** page for
 the dataset named **Sales**.
 
-<img src="./Docs/Images/media/image104.png"  width=700  />
+<img src="./Docs/Images/media/image104.png"  width=620  />
 
 You should be able to verify that the **Sales** dataset has been
 configured by a service principal profile which is evidenced by the
