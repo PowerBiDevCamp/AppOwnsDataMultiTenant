@@ -1042,13 +1042,13 @@ The **AppOwnsDataMultiTenantDB** class serves as the top-level class for
 the Entity Framework which contains two **DBSet** properties
 named **Profiles** and **Tenants**.
 
-<img src="./Docs/Images/media/image66.png"  width=680  />
+<img src="./Docs/Images/media/image66.png"  width=650  />
 
 When you generate the database, each of these **DBSet** properties will
 be created as database tables. The **Profiles** table is generated using
 the table schema defined by the **AppProfile** class.
 
-<img src="./Docs/Images/media/image67.png"  width=420  />
+<img src="./Docs/Images/media/image67.png"  width=480  />
 
 As you saw earlier, Power BI tracks an **id** and **displayName**
 property for each profile. The **AppProfile** class defines
