@@ -717,7 +717,7 @@ principal profiles will be able to create new workspaces.
 In **Workspace settings**, set **Apply to : The entire
 organization** and click the **Apply** button to save your changes.
 
-<img src="./Docs/Images/media/image35.png"  width=600  />
+<img src="./Docs/Images/media/image35.png"  width=480  />
 
 There is one more tenant-level setting that must be enabled for the
 **AppOwnsDataMultiTenant** application to work correctly. That is the
