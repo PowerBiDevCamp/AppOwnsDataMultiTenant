@@ -757,7 +757,7 @@ Complete the following steps in the **Redirect URI** section.
 * Do not enter a value for the **Redirect URI**. Leave it blank.
 * Click the **Register** button to create the new Azure AD application.
 
-<img src="./Docs/Images/media/image40.png"  width=600  />
+<img src="./Docs/Images/media/image40.png"  width=720  />
 
 After creating a new Azure AD application in the Azure portal, you
 should see the Azure AD application overview page which displays
