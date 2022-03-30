@@ -968,7 +968,7 @@ create the **AppOwnsDataMultiTenantDB** database in a different
 location, you can update the value of this connection string to point to
 a different server.
 
-<img src="./Docs/Images/media/image62.png"  width=600   />
+<img src="./Docs/Images/media/image62.png"  width=900   />
 
 In the **DemoSettings** section there is a property named **AdminUser**.
 The reason that this property exists has to with you being able to view
