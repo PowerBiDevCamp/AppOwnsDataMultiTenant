@@ -992,7 +992,7 @@ as a workspace member. Update the **ServicePrincipalObjectId** setting
 with the value you Service Principal Object Id value you collected
 earlier.
 
-<img src="./Docs/Images/media/image64.png"  width=550   />
+<img src="./Docs/Images/media/image64.png"  width=580   />
 
 In the **DemoSettings** section there is a property
 named **CapacityId**. The reason this property exists has to do with
@@ -1004,7 +1004,7 @@ you don't have a Capacity ID, that is not a problem. Simply leave the
 **CapacityId** setting as an empty string and the application will
 ignore this setting.
 
-Once you have made your changes. save and close
+Once you have made your changes, save and close
 the **appsettings.json** file. You are now ready to move on to the step
 where you will create the new database named
 **AppOwnsDataMultiTenantDB**.
