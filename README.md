@@ -588,7 +588,7 @@ the user to create a new customer tenant. When using the application,
 you can enter the **Tenant Name** for a new customer and the details of
 the customer's database.
 
-<img src="./Docs/Images/media/image21.png"  />
+<img src="./Docs/Images/media/image21.png" width=700 />
 
 When you click the **Create New Tenant** button, the application
 responds by executing code which begins by creating a new service
@@ -600,7 +600,7 @@ application design maintains a one-to-one relationship between service
 principal profiles and customer tenant workspaces which is what
 Microsoft recommends as a best practice.
 
-<img src="./Docs/Images/media/image22.png" style="width:3.62135in;height:1.68254in" />
+<img src="./Docs/Images/media/image22.png" width=700 />
 
 Keep in mind that **AppOwnsDataMultiTenant** is a proof-of-concept (POC)
 that doesn't include certain behavior that would be required in any
