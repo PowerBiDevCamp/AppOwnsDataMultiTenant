@@ -1307,12 +1307,12 @@ at [https://app.powerbi.com](https://app.powerbi.com/). You should be
 able to see and navigate to any of the Power BI workspaces that have
 been created by the **AppOwnsDataMultiTenant** application.
 
-<img src="./Docs/Images/media/image100.png"  width=600  />
+<img src="./Docs/Images/media/image100.png"  width=400  />
 
 Navigate to one of these workspaces such as the workspace
 named **Contoso**.
 
-<img src="./Docs/Images/media/image101.png"  width=600  />
+<img src="./Docs/Images/media/image101.png"  width=700  />
 
 Click the **Access** button to display the **Access** pane for the
 Contoso workspace.
