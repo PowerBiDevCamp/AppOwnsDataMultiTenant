@@ -1126,7 +1126,7 @@ you an see the new database named **AppOwnsDataMultiTenantDB**.
 If you expand the **Tables** node for **AppOwnsDataMultiTenantDB**, you
 should see the two tables named **Profiles** and **Tenants**.
 
-<img src="./Docs/Images/media/image76.png"  width=240  />
+<img src="./Docs/Images/media/image76.png"  width=280  />
 
 The **AppOwnsDataMultiTenantDB** database has now been set up and you
 are ready to run the application in the Visual Studio debugger.
