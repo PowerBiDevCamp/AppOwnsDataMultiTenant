@@ -302,13 +302,13 @@ about how service principal profiles work.
 
 Service principal profiles are local accounts which are created within
 the context of the Power BI Service. A service principal can use the new
-[Profiles](https://docs.microsoft.com/en-us/rest/api/power-bi/profiles)
+**[Profiles](https://docs.microsoft.com/en-us/rest/api/power-bi/profiles)**
 endpoint of the Power BI REST API to create new service principal
 profiles. This makes it possible for a service principal to create and
 manage its own set of service principal profiles for a custom
 application as shown in the following diagram.
 
-<img src="./Docs/Images/media/image3.png" style="width:2.73655in;height:1.87302in" />
+<img src="./Docs/Images/media/image3.png" width=700 />
 
 Later in this article, you will learn how to write code to create
 service principal profiles as well as how to execute Power BI REST API
