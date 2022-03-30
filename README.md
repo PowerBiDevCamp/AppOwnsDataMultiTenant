@@ -549,7 +549,7 @@ Now, let's say you need to create or manage a service principal profile.
 You can call **SetCallingContext** without any parameter so calls
 afterwards will execute under the identity of the service principal.
 
-<img src="./Docs/Images/media/image18.png"  width=500 />
+<img src="./Docs/Images/media/image18.png"  width=600 />
 
 When you need to create and configure a new workspace for a new customer
 tenant, you want to execute that code as a service principal profile.
@@ -557,7 +557,7 @@ Therefore, you should call **SetCallingContext** and pass the profile id
 so that Power BI REST operations called afterwards are executed as a
 service principal profile and not as the parent service principal.
 
-<img src="./Docs/Images/media/image19.png"  width=700 />
+<img src="./Docs/Images/media/image19.png"  width=720 />
 
 Once you have used a specific service principal profile to create and
 configure a workspace, you should use that same service principal
