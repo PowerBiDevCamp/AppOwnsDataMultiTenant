@@ -17,7 +17,7 @@ this article contains step-by-step instructions to set up the
 **AppOwnsDataMultiTenant** application to get it up and running on your
 developer workstation.
 
-This article is also available for download as a **[Word document](https://github.com/PowerBiDevCamp/AppOwnsDataMultiTenant/raw/main/Docs/AppOwnsDataMultiTenant.docx)** or a **[PDF document](https://github.com/PowerBiDevCamp/AppOwnsDataMultiTenant/raw/main/Docs/AppOwnsDataMultiTenant.pdf)**.
+> This article is also available for download in **[Word document](https://github.com/PowerBiDevCamp/AppOwnsDataMultiTenant/raw/main/Docs/AppOwnsDataMultiTenant.docx)** format as well as **[PDF document](https://github.com/PowerBiDevCamp/AppOwnsDataMultiTenant/raw/main/Docs/AppOwnsDataMultiTenant.pdf)** format.
 
 # Table of Contents
 
