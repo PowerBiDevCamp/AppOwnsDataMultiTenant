@@ -992,7 +992,7 @@ as a workspace member. Update the **ServicePrincipalObjectId** setting
 with the value you Service Principal Object Id value you collected
 earlier.
 
-<img src="./Docs/Images/media/image64.png"  width=480   />
+<img src="./Docs/Images/media/image64.png"  width=550   />
 
 In the **DemoSettings** section there is a property
 named **CapacityId**. The reason this property exists has to do with
