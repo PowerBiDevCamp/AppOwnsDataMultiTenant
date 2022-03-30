@@ -5,6 +5,3 @@ Client ID:
 Client Secret:
 
 Service Principal Object ID:
-
-
-
