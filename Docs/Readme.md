@@ -245,7 +245,7 @@ AD tenant. It's possible for a service principal to create datasource
 credentials that are used by datasets in different workspaces as shown
 in the following diagram.
 
-<img src="./Images/media/image2.png" style="width:4.35295in;height:1.90476in" />
+<img src="./Images/media/image2.png" style="width:4.74843in;height:2.11349in" alt="Graphical user interface, diagram, application Description automatically generated" />
 
 ### Design Strategies Before Service Principal Profiles
 
@@ -396,7 +396,7 @@ owner of a dataset and the owner of datasource credentials. This leads
 to the best practice of creating a new service principal profile for
 each new customer tenant as shown in the following diagram.
 
-<img src="./Images/media/image4.png" style="width:3.72702in;height:2in" />
+<img src="./Images/media/image4.png" style="width:3.61635in;height:1.70069in" alt="Diagram Description automatically generated" />
 
 When you develop a custom application using service principal profiles,
 you only need a single Azure AD application which provides your
