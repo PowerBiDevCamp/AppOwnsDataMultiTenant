@@ -955,7 +955,7 @@ the **TenantId**, **ClientId** and **ClientSecret** with the data you
 collected when creating the Azure AD application named **Power BI Tenant
 Management Application.**
 
-<img src="./Docs/Images/media/image61.png"  width=480   />
+<img src="./Docs/Images/media/image61.png"  width=400   />
 
 Now let's examine the **AppOwnsDataMultiTenantDB** section and the
 setting inside named **ConnectString**. This is the connection string
