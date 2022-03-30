@@ -726,11 +726,11 @@ the **Integration settings** section in **Tenant settings**. Inside the
 that section locate and expand the setting named **Map and filled map
 visuals**.
 
-<img src="./Docs/Images/media/image36.png"  width=500 />
+<img src="./Docs/Images/media/image36.png"  width=560 />
 
 Enable the **Map and filled map visuals** setting and then click **Apply**.
 
-<img src="./Docs/Images/media/image37.png"  width=600  />
+<img src="./Docs/Images/media/image37.png"  width=480  />
 
 You have now completed the configuration of Power BI tenant-level
 settings. Now you can move ahead to create the Azure AD application that
