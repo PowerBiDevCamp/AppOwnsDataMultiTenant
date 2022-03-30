@@ -861,18 +861,18 @@ On the **Power BI Apps** security group summary page, click the
 On the **Members** page, click the **Add members** link to display the
 **Add members** pane.
 
-<img src="./Docs/Images/media/image54.png"  width=600   />
+<img src="./Docs/Images/media/image54.png"  width=500   />
 
 In the **Add members** pane, locate and select the **Power BI Embedding
 Tenant Manager** application. Add this application to the **Power BI
 Apps** security group.
 
-<img src="./Docs/Images/media/image55.png"  width=500   />
+<img src="./Docs/Images/media/image55.png"  width=480   />
 
 Verify that the **Power BI Embedding Tenant Manager** application is now
 a member of the **Power BI Apps** group.
 
-<img src="./Docs/Images/media/image56.png"  width=500   />
+<img src="./Docs/Images/media/image56.png"  width=450   />
 
 You are now finished in configuring Azure AD for the application setup.
 
