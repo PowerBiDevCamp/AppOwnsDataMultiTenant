@@ -1032,7 +1032,7 @@ that you shouldn't make any changes to **AppOwnsDataMultiTenantDB.cs**.
 You are just going to inspect the file to understand how
 the **AppOwnsDataMultiTenantDB** database is structured.
 
-<img src="./Docs/Images/media/image65.png" width=700 />
+<img src="./Docs/Images/media/image65.png" width=800 />
 
 When you inspect the code inside **AppOwnsDataMultiTenantDB.cs**, you
 will see a class named **AppOwnsDataMultiTenantDB** that derives
