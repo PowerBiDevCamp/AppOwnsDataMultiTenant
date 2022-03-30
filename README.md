@@ -600,7 +600,7 @@ application design maintains a one-to-one relationship between service
 principal profiles and customer tenant workspaces which is what
 Microsoft recommends as a best practice.
 
-<img src="./Docs/Images/media/image22.png" width=500 />
+<img src="./Docs/Images/media/image22.png" width=600 />
 
 Keep in mind that **AppOwnsDataMultiTenant** is a proof-of-concept (POC)
 that doesn't include certain behavior that would be required in any
