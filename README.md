@@ -1162,7 +1162,7 @@ On the **Onboard New Tenant** page, enter a **Tenant Name** of
 values. Click to **Create New Tenant** button to begin the process of
 creating a new customer tenant.
 
-<img src="./Docs/Images/media/image81.png"  width=600  />
+<img src="./Docs/Images/media/image81.png"  width=700  />
 
 What happens when you click the **Create New Tenant** button? The
 **AppOwnsDataMultiTenant** application uses the Power BI REST API to
