@@ -1297,7 +1297,7 @@ If you use a developer tool such as Fiddler, you can see that calls to
 access a workspace and to generate embed tokens includes the
 **PowerBI-profile-id** header as shown in the following screenshot.
 
-<img src="./Docs/Images/media/image99.png"  width=600  />
+<img src="./Docs/Images/media/image99.png"  width=900  />
 
 ### Inspect the Power BI Workspaces
 
