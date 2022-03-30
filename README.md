@@ -653,7 +653,7 @@ It might take a minute or two before the group appears. Refresh the
 **All Groups** page a few times until you can verify that you can see
 the new security group named **Power BI Apps** in the list of groups.
 
-<img src="./Docs/Images/media/image25.png" width=700 />
+<img src="./Docs/Images/media/image25.png" width=500 />
 
 ### Configure Power BI tenant-level settings for service principal profile access
 
