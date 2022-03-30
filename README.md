@@ -1048,7 +1048,7 @@ When you generate the database, each of these **DBSet** properties will
 be created as database tables. The **Profiles** table is generated using
 the table schema defined by the **AppProfile** class.
 
-<img src="./Docs/Images/media/image67.png"  width=480  />
+<img src="./Docs/Images/media/image67.png"  width=460  />
 
 As you saw earlier, Power BI tracks an **id** and **displayName**
 property for each profile. The **AppProfile** class defines
@@ -1060,7 +1060,7 @@ metadata about each service principal profile it creates.
 The **Tenants** table is generated using the table schema defined by
 the **CustomerTenant** class.
 
-<img src="./Docs/Images/media/image68.png"  width=480  />
+<img src="./Docs/Images/media/image68.png"  width=420  />
 
 After you have inspected the code used to generated the database, close
 the source file named **AppOwnsDataMultiTenantDB.cs** without saving any
