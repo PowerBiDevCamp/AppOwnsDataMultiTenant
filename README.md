@@ -1254,12 +1254,12 @@ each of these calls is made under the identity of a service principal
 profile as evidenced by the existence of the **X-PowerBI-profile-id**
 header.
 
-<img src="./Docs/Images/media/image93.png"  width=600  />
+<img src="./Docs/Images/media/image93.png"  width=900  />
 
 Click on the back arrow to return to the
 **Tenants** page.
 
-<img src="./Docs/Images/media/image94.png"  width=600  />
+<img src="./Docs/Images/media/image94.png"  width=400  />
 
 ### Embed Reports
 
