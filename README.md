@@ -1096,7 +1096,7 @@ source files. There is no need to change anything in these source files
 but you can inspect what's inside them if you are curious how the Entity
 Framework does its work.
 
-<img src="./Docs/Images/media/image72.png"  width=400 />
+<img src="./Docs/Images/media/image72.png"  width=320 />
 
 Return to the **Package Manager Console** and run the
 following **Update-Database** command to generate the database
@@ -1116,17 +1116,17 @@ the database that has just been created. Open the **SQL Server Object
 Explorer** by invoking the **View \>** **SQL Server Object
 Explorer** menu command.
 
-<img src="./Docs/Images/media/image74.png"  width=700 />
+<img src="./Docs/Images/media/image74.png"  width=500 />
 
 Expand the **Databases** node for the server you are using and verify
 you an see the new database named **AppOwnsDataMultiTenantDB**.
 
-<img src="./Docs/Images/media/image75.png" style="width:3.38472in;height:1.09375in" />
+<img src="./Docs/Images/media/image75.png"  width=500 />
 
 If you expand the **Tables** node for **AppOwnsDataMultiTenantDB**, you
 should see the two tables named **Profiles** and **Tenants**.
 
-<img src="./Docs/Images/media/image76.png" style="width:2.09375in;height:1.22917in" />
+<img src="./Docs/Images/media/image76.png"  width=500  />
 
 The **AppOwnsDataMultiTenantDB** database has now been set up and you
 are ready to run the application in the Visual Studio debugger.
