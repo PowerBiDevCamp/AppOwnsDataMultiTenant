@@ -948,14 +948,14 @@ the **appsettings.json** file. Open the **appsettings.json** file and
 examine the JSON content inside. There are three important sections
 named **AzureAd**, **AppOwnsDataMultiTenantDB** and **DemoSettings**.
 
-<img src="./Docs/Images/media/image60.png" style="width:4.77642in;height:1.8805in" />
+<img src="./Docs/Images/media/image60.png"  width=600   />
 
 Inside the **AzureAd** section, update
 the **TenantId**, **ClientId** and **ClientSecret** with the data you
 collected when creating the Azure AD application named **Power BI Tenant
 Management Application.**
 
-<img src="./Docs/Images/media/image61.png" style="width:3.16352in;height:0.91654in" />
+<img src="./Docs/Images/media/image61.png"  width=600   />
 
 Now let's examine the **AppOwnsDataMultiTenantDB** section and the
 setting inside named **ConnectString**. This is the connection string
@@ -968,7 +968,7 @@ create the **AppOwnsDataMultiTenantDB** database in a different
 location, you can update the value of this connection string to point to
 a different server.
 
-<img src="./Docs/Images/media/image62.png" style="width:7.50972in;height:0.76042in" />
+<img src="./Docs/Images/media/image62.png"  width=600   />
 
 In the **DemoSettings** section there is a property named **AdminUser**.
 The reason that this property exists has to with you being able to view
@@ -983,7 +983,7 @@ Update the **AdminUser** setting with your Azure AD account name so that
 you will be able to see all the Power BI workspaces created by this
 application.
 
-<img src="./Docs/Images/media/image63.png" style="width:3.22847in;height:0.61458in" />
+<img src="./Docs/Images/media/image63.png"  width=600   />
 
 In the **DemoSettings** section there is a property
 named **ServicePrincipalObjectId**. The reason this property exists has
@@ -992,7 +992,7 @@ as a workspace member. Update the **ServicePrincipalObjectId** setting
 with the value you Service Principal Object Id value you collected
 earlier.
 
-<img src="./Docs/Images/media/image64.png" style="width:4.38472in;height:0.72917in" />
+<img src="./Docs/Images/media/image64.png"  width=600   />
 
 In the **DemoSettings** section there is a property
 named **CapacityId**. The reason this property exists has to do with
