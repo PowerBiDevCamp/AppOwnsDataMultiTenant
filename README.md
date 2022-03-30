@@ -534,7 +534,7 @@ There is a second way to set the **X-PowerBI-profile-id** header for a
 **PowerBIClient** object by passing the GUID for a profile id in the
 constructor using this code.
 
-<img src="./Docs/Images/media/image16.png"  width=750 />
+<img src="./Docs/Images/media/image16.png"  width=650 />
 
 As you program a multitenant application, you need to switch back and
 forth between executing calls as the parent service principal and
@@ -543,7 +543,7 @@ context switching is to use a class-level **PowerBIClient** property
 named **pbiClient** and a method named **SetCallingContext** which can
 be called to switch between caller identities.
 
-<img src="./Docs/Images/media/image17.png"  width=750 />
+<img src="./Docs/Images/media/image17.png"  width=600 />
 
 Now, let's say you need to create or manage a service principal profile.
 You can call **SetCallingContext** without any parameter so calls
