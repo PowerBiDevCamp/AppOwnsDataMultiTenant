@@ -1143,7 +1143,7 @@ caption **AppOwnsDataMultiTenant**.
 When the application starts, you should see its welcome page as shown in
 the following screenshot.
 
-<img src="./Docs/Images/media/image78.png"  width=600  />
+<img src="./Docs/Images/media/image78.png"  width=700  />
 
 ### Create Customer Tenants
 
