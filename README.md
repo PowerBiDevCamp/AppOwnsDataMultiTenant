@@ -521,7 +521,7 @@ If you are using the Power BI .NET SDK, you can set the
 **X-PowerBI-profile-id** header value explicitly with the GUID for
 service principal profile Id using the following code.
 
-<img src="./Docs/Images/media/image15.png" width=750 />
+<img src="./Docs/Images/media/image15.png" width=650 />
 
 As you can see from the previous code listing, once you have added the
 **X-PowerBI-profile-id** header to the **PowerBIClient** object, you can
@@ -534,7 +534,7 @@ There is a second way to set the **X-PowerBI-profile-id** header for a
 **PowerBIClient** object by passing the GUID for a profile id in the
 constructor using this code.
 
-<img src="./Docs/Images/media/image16.png"  width=780 />
+<img src="./Docs/Images/media/image16.png"  width=650 />
 
 As you program a multitenant application, you need to switch back and
 forth between executing calls as the parent service principal and
@@ -549,7 +549,7 @@ Now, let's say you need to create or manage a service principal profile.
 You can call **SetCallingContext** without any parameter so calls
 afterwards will execute under the identity of the service principal.
 
-<img src="./Docs/Images/media/image18.png"  width=750 />
+<img src="./Docs/Images/media/image18.png"  width=650 />
 
 When you need to create and configure a new workspace for a new customer
 tenant, you want to execute that code as a service principal profile.
