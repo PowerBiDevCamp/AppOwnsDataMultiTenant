@@ -779,7 +779,7 @@ Azure AD.
 Next, repeat the same step by copying the **Client ID** and copying that
 into the text document as well.
 
-<img src="./Docs/Images/media/image43.png"  width=600  />
+<img src="./Docs/Images/media/image43.png"  width=500  />
 
 Your text document should now contain the **Tenant ID** and **Client
 ID**  as shown in the following screenshot.
