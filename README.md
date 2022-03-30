@@ -1379,7 +1379,7 @@ On the **Onboard New Tenant** page…
 * In the **Profile** section, select the option to **Create Tenant using Service Principal Profile from Pool**.
 * Select the pre-existing profile named **Acme Profile**.
 
-When your page matches the following screenshot, click the **Create New
+When the **Onboard New Tenant** page matches the following screenshot, click the **Create New
 Tenant**.
 
 <img src="./Docs/Images/media/image109.png"  width=600  />
