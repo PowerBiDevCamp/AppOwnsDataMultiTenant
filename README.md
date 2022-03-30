@@ -208,11 +208,9 @@ Prior to the introduction of service principal profiles, developers have
 built multitenant applications with support for App-Owns-Data embedding
 using one the following three design strategies.
 
--   Single service principal
-
--   Service principal pooling
-
--   One service principal per workspace
+* Single service principal
+* Service principal pooling
+* One service principal per workspace
 
 Now let's review the strengths and weakness of each of these design
 strategies starting with single service principal. When an application
