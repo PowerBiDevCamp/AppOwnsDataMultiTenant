@@ -534,7 +534,7 @@ There is a second way to set the **X-PowerBI-profile-id** header for a
 **PowerBIClient** object by passing the GUID for a profile id in the
 constructor using this code.
 
-<img src="./Docs/Images/media/image16.png"  width=680 />
+<img src="./Docs/Images/media/image16.png"  width=780 />
 
 As you program a multitenant application, you need to switch back and
 forth between executing calls as the parent service principal and
