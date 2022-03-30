@@ -481,7 +481,7 @@ principal profile.
 If you are programming with the Power BI .NET SDK, you can call
 **Profile.GetProfiles** using the following code.
 
-<img src="./Docs/Images/media/image10.png" width=500 />
+<img src="./Docs/Images/media/image10.png" width=720 />
 
 Let's say you've just created a new service principal profile and you'd
 like to add it as a member of a workspace to give it access. You can
