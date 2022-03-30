@@ -543,7 +543,7 @@ context switching is to use a class-level **PowerBIClient** property
 named **pbiClient** and a method named **SetCallingContext** which can
 be called to switch between caller identities.
 
-<img src="./Docs/Images/media/image17.png"  width=600 />
+<img src="./Docs/Images/media/image17.png"  width=520 />
 
 Now, let's say you need to create or manage a service principal profile.
 You can call **SetCallingContext** without any parameter so calls
