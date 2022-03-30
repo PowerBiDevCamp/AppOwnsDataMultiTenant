@@ -1317,7 +1317,7 @@ named **Contoso**.
 Click the **Access** button to display the **Access** pane for the
 Contoso workspace.
 
-<img src="./Docs/Images/media/image102.png"  width=600  />
+<img src="./Docs/Images/media/image102.png"  width=700  />
 
 On the workspace **Access** pane, you should see two members including
 your user account and a service principal profile.
