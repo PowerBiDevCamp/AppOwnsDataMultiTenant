@@ -30,7 +30,7 @@ developer workstation.
   * [Executing Power BI REST API Calls as a Service Principal Profile](#executing-power-bi-rest-api-calls-as-a-service-principal-profile)
   * [Using the Profiles API to create and manage service principal profiles](#using-the-profiles-api-to-create-and-manage-service-principal-profiles)
   * [Executing API Calls under the Identity of a Service Principal Profile](#executing-api-calls-under-the-identity-of-a-service-principal-profile)
-* [Getting Started with the **AppOwnsDataMultiTenant** application](#getting-started-with-the-appownsdatamultitenant-application)
+* [Getting Started with the AppOwnsDataMultiTenant application](#getting-started-with-the-appownsdatamultitenant-application)
   * [Setting up your development environment](#setting-up-your-development-environment)
   * [Create an Azure AD security group named Power BI Apps](#create-an-azure-ad-security-group-named-power-bi-apps)
   * [Configure Power BI tenant-level settings for service principal profile access](#configure-power-bi-tenant-level-settings-for-service-principal-profile-access)
