@@ -1,4 +1,4 @@
-### Summary
+### Abstract
 The **AppOwnsDataMultiTenant** application is a sample .NET 6
 application which demonstrates how to design an application which
 implements App-Owns-Data embedding using **service principal profiles**.
